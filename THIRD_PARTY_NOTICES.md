@@ -1120,7 +1120,7 @@ fixture README for the source, counts, and content checksum.
 ## AISimulate PR #417 preview bundle
 
 - Derived files: `pr-417/fpm-accuracy/**` and `pr-417/e2e-accuracy/styles.css`.
-- Upstream: https://github.com/ai-dynamo/aisimulate/tree/85c05145aabedd7db35e999d822d9e1dca55c41e
+- Upstream: https://github.com/ai-dynamo/aisimulate/tree/ec7793687e579d65673a48c7e47f2aa4962eb312
 - Original source paths: `pages/fpm-accuracy/`, `pages/e2e-accuracy/styles.css`; generated public measurement assets from GitHub Actions artifact run `37659580012`.
 - Copyright: NVIDIA CORPORATION & AFFILIATES; embedded dependencies retain their own notices above and in the copied files.
 - License: Apache-2.0 for AISimulate; embedded Plotly license is preserved at `pr-417/fpm-accuracy/assets/PLOTLY-LICENSE.txt`.
