@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "default_branch": "main",
+  "branches": [
+    {
+      "branch": "main",
+      "status": "available",
+      "summary_path": "branches/0d6e4079e36703eb/summary.json",
+      "head_sha": "5b718eda99ca43013073ac4fe2793dd9f72e86fa"
+    },
+    {
+      "branch": "release/0.12.0",
+      "status": "available",
+      "summary_path": "branches/cb21c32489602c02/summary.json",
+      "head_sha": "1f728534910187ecb2f021ef5e4bd4949bd555d0"
+    },
+    {
+      "branch": "release/0.12.1",
+      "status": "available",
+      "summary_path": "branches/c809a00d568307a7/summary.json",
+      "head_sha": "468f05de53b4eab330fb6e354017277350292825"
+    }
+  ]
+}
