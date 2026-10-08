@@ -1,7 +1,7 @@
 # AISimulate review previews
 
 - [PR #417](https://github.com/ai-dynamo/aisimulate/pull/417): [FPM Gym preview](https://simone-chen.github.io/aisimulate-previews/pr-417/fpm-accuracy/?branch=main).
-- Dashboard source: `ai-dynamo/aisimulate` at `c4213ae9f30aed66590ca1ed5c6c69adfb12b50f` (Apache-2.0).
+- Dashboard source: `ai-dynamo/aisimulate` at `2d00fc1420cc932cba42c9c8f7549820db98680b` (Apache-2.0).
 - Public Pages data artifact: GitHub Actions run `37659580012`; latest main evaluation: run `37610421466`, attempt `1`, October 7, 2026.
 - Preview assets are built from that source revision with `scripts/pages/build_pages_site.py`. The qualified `fpm-accuracy/data`, `branches`, and `branches.json` assets are copied from the downloaded public Pages artifact.
 - `pr-417/index.html` redirects to the dashboard. No production deployment or evaluation is triggered.
