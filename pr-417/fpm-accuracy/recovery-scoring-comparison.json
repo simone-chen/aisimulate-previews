@@ -1,0 +1,364 @@
+{
+  "legacy_run": "37880548507",
+  "migrated_run": "37988272681",
+  "aisim_revision": "e45612e18376c6aef28fb697f3131602613354f4",
+  "hf_revision": "ae9f4acc077f69b0a12bd7a558e3a6e4bf48550b",
+  "configurations": 29,
+  "metrics_checked": 1080,
+  "maximum_mape_delta": 5.6404361791460715,
+  "membership_and_counts_equal": true,
+  "fpm_scores_exactly_equal": true,
+  "regression_deltas": [
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-118ccc21",
+      "phase": "all",
+      "legacy": 253.90439457805556,
+      "migrated": 250.41833127989733,
+      "delta": -3.4860632981582285
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-118ccc21",
+      "phase": "decode",
+      "legacy": 242.84060688676496,
+      "migrated": 239.27123884924634,
+      "delta": -3.5693680375186148
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-118ccc21",
+      "phase": "mixed",
+      "legacy": 2380.7219319958,
+      "migrated": 2378.159432395523,
+      "delta": -2.5624996002770786
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-118ccc21",
+      "phase": "prefill",
+      "legacy": 245.54203083711263,
+      "migrated": 245.54203083711263,
+      "delta": 0.0
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/pure-tp4@aisim-commit-f2a2b61b",
+      "phase": "all",
+      "legacy": 2.244055107903142,
+      "migrated": 2.321459557405322,
+      "delta": 0.07740444950217995
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/pure-tp4@aisim-commit-f2a2b61b",
+      "phase": "decode",
+      "legacy": 1.4837560805078902,
+      "migrated": 1.5060221776227565,
+      "delta": 0.022266097114866268
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/pure-tp4@aisim-commit-f2a2b61b",
+      "phase": "mixed",
+      "legacy": 11.566420617082038,
+      "migrated": 11.520794967916652,
+      "delta": -0.045625649165385695
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/pure-tp4@aisim-commit-f2a2b61b",
+      "phase": "prefill",
+      "legacy": 20.51806001337927,
+      "migrated": 22.613995961770947,
+      "delta": 2.095935948391677
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-4baad028",
+      "phase": "all",
+      "legacy": 15.194280034566653,
+      "migrated": 15.682867722354617,
+      "delta": 0.48858768778796424
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-4baad028",
+      "phase": "decode",
+      "legacy": 8.929183171251534,
+      "migrated": 9.47075024687193,
+      "delta": 0.5415670756203959
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-4baad028",
+      "phase": "prefill",
+      "legacy": 72.97239555180612,
+      "migrated": 72.97239555180612,
+      "delta": 0.0
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/dep4@aisim-commit-unknown-1cb1c4de",
+      "phase": "all",
+      "legacy": 17.665385202512674,
+      "migrated": 20.341152955978668,
+      "delta": 2.675767753465994
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/dep4@aisim-commit-unknown-1cb1c4de",
+      "phase": "decode",
+      "legacy": 20.28661106958865,
+      "migrated": 25.92704724873472,
+      "delta": 5.6404361791460715
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/dep4@aisim-commit-unknown-1cb1c4de",
+      "phase": "prefill",
+      "legacy": 15.269479610543549,
+      "migrated": 15.23542149641073,
+      "delta": -0.03405811413281867
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-900fc3ca",
+      "phase": "all",
+      "legacy": 16.998392243642122,
+      "migrated": 17.2750029157643,
+      "delta": 0.27661067212217816
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-900fc3ca",
+      "phase": "decode",
+      "legacy": 20.543466003765158,
+      "migrated": 20.885588779251513,
+      "delta": 0.34212277548635583
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-900fc3ca",
+      "phase": "prefill",
+      "legacy": 13.69710579080552,
+      "migrated": 13.912709489880827,
+      "delta": 0.21560369907530763
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b200-sxm/vllm/0.28.0/dep8@aisim-commit-unknown-7c57d51e",
+      "phase": "all",
+      "legacy": 4.228340458706264,
+      "migrated": 4.25460400706919,
+      "delta": 0.02626354836292588
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b200-sxm/vllm/0.28.0/dep8@aisim-commit-unknown-7c57d51e",
+      "phase": "decode",
+      "legacy": 3.476987098077366,
+      "migrated": 3.5033370577857825,
+      "delta": 0.02634995970841647
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b200-sxm/vllm/0.28.0/dep8@aisim-commit-unknown-7c57d51e",
+      "phase": "mixed",
+      "legacy": 12.912645384854972,
+      "migrated": 12.937910172165681,
+      "delta": 0.025264787310709025
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b300-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/dep8@aisim-commit-unknown-bf0f277d",
+      "phase": "all",
+      "legacy": 2.1779218348242124,
+      "migrated": 1.8879658109966666,
+      "delta": -0.2899560238275458
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b300-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/dep8@aisim-commit-unknown-bf0f277d",
+      "phase": "decode",
+      "legacy": 1.6846466341899158,
+      "migrated": 1.383690736705355,
+      "delta": -0.30095589748456075
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b300-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/dep8@aisim-commit-unknown-bf0f277d",
+      "phase": "prefill",
+      "legacy": 19.238273583717852,
+      "migrated": 19.32875775542553,
+      "delta": 0.0904841717076792
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/dep8@aisim-commit-unknown-6cdbf517",
+      "phase": "all",
+      "legacy": 0.626889738907162,
+      "migrated": 0.6326456783237298,
+      "delta": 0.0057559394165677125
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/dep8@aisim-commit-unknown-6cdbf517",
+      "phase": "decode",
+      "legacy": 0.4781689985482771,
+      "migrated": 0.479532628859299,
+      "delta": 0.0013636303110218795
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/dep8@aisim-commit-unknown-6cdbf517",
+      "phase": "prefill",
+      "legacy": 9.256140242848351,
+      "migrated": 9.51675193050167,
+      "delta": 0.2606116876533182
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/tep8@aisim-commit-unknown-a90be082",
+      "phase": "all",
+      "legacy": 0.539075451495534,
+      "migrated": 0.5291292988567445,
+      "delta": -0.009946152638789507
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/tep8@aisim-commit-unknown-a90be082",
+      "phase": "decode",
+      "legacy": 0.45675651313150506,
+      "migrated": 0.44646859818428436,
+      "delta": -0.0102879149472207
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/tep8@aisim-commit-unknown-a90be082",
+      "phase": "prefill",
+      "legacy": 3.2890235538160777,
+      "migrated": 3.2904943196919616,
+      "delta": 0.001470765875883906
+    },
+    {
+      "configuration_id": "data/moonshotai--Kimi-K3/gb300/vllm/0.1.dev19262/tep8@aisim-commit-unknown-25aaa262",
+      "phase": "all",
+      "legacy": 1.83181918023923,
+      "migrated": 1.8336742334288365,
+      "delta": 0.001855053189606437
+    },
+    {
+      "configuration_id": "data/moonshotai--Kimi-K3/gb300/vllm/0.1.dev19262/tep8@aisim-commit-unknown-25aaa262",
+      "phase": "decode",
+      "legacy": 1.3714598946789156,
+      "migrated": 1.3728704047468065,
+      "delta": 0.0014105100678909466
+    },
+    {
+      "configuration_id": "data/moonshotai--Kimi-K3/gb300/vllm/0.1.dev19262/tep8@aisim-commit-unknown-25aaa262",
+      "phase": "mixed",
+      "legacy": 10.33042846806935,
+      "migrated": 10.339072616126066,
+      "delta": 0.00864414805671565
+    },
+    {
+      "configuration_id": "data/moonshotai--Kimi-K3/gb300/vllm/0.1.dev19262/tep8@aisim-commit-unknown-25aaa262",
+      "phase": "prefill",
+      "legacy": 9.685864587863922,
+      "migrated": 9.695534025444907,
+      "delta": 0.009669437580985374
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/pure-tp8@aisim-commit-unknown-0c6e5219",
+      "phase": "all",
+      "legacy": 0.8701931888729303,
+      "migrated": 0.8735357701188972,
+      "delta": 0.003342581245966869
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/pure-tp8@aisim-commit-unknown-0c6e5219",
+      "phase": "decode",
+      "legacy": 0.8426922204145398,
+      "migrated": 0.8462287164045867,
+      "delta": 0.003536495990046906
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/pure-tp8@aisim-commit-unknown-0c6e5219",
+      "phase": "prefill",
+      "legacy": 8.667436055704346,
+      "migrated": 8.615798742066453,
+      "delta": -0.05163731363789381
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/vllm/0.25.1/dep8@aisim-commit-e0de0183",
+      "phase": "all",
+      "legacy": 11.830001447571172,
+      "migrated": 12.387773131228807,
+      "delta": 0.5577716836576343
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/vllm/0.25.1/dep8@aisim-commit-e0de0183",
+      "phase": "decode",
+      "legacy": 6.255743861559259,
+      "migrated": 6.9160654960239025,
+      "delta": 0.6603216344646432
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/vllm/0.25.1/dep8@aisim-commit-e0de0183",
+      "phase": "prefill",
+      "legacy": 42.148524415392075,
+      "migrated": 42.148524415392075,
+      "delta": 0.0
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/vllm/0.25.1/tep8@aisim-commit-e0de0183",
+      "phase": "all",
+      "legacy": 26.760112874980138,
+      "migrated": 25.950163932440724,
+      "delta": -0.809948942539414
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/vllm/0.25.1/tep8@aisim-commit-e0de0183",
+      "phase": "decode",
+      "legacy": 9.562209316004981,
+      "migrated": 8.59027058495768,
+      "delta": -0.9719387310473007
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/vllm/0.25.1/tep8@aisim-commit-e0de0183",
+      "phase": "prefill",
+      "legacy": 112.74963066985592,
+      "migrated": 112.74963066985592,
+      "delta": 0.0
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "phase": "all",
+      "legacy": 2.1512972437015105,
+      "migrated": 2.157241329641199,
+      "delta": 0.005944085939688648
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "phase": "decode",
+      "legacy": 2.137666635170106,
+      "migrated": 2.143349585512806,
+      "delta": 0.005682950342699833
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "phase": "mixed",
+      "legacy": 7.282401263682217,
+      "migrated": 7.425667154673108,
+      "delta": 0.14326589099089126
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "phase": "prefill",
+      "legacy": 4.104077943012152,
+      "migrated": 4.104077943012153,
+      "delta": 8.881784197001252e-16
+    },
+    {
+      "configuration_id": "data/nvidia--MiniMax-M3-NVFP4/b200-sxm/vllm/0.28.0/pure-tp4@aisim-commit-unknown-18d3fcf0",
+      "phase": "all",
+      "legacy": 1.373166799643732,
+      "migrated": 1.3636232291022552,
+      "delta": -0.009543570541476809
+    },
+    {
+      "configuration_id": "data/nvidia--MiniMax-M3-NVFP4/b200-sxm/vllm/0.28.0/pure-tp4@aisim-commit-unknown-18d3fcf0",
+      "phase": "decode",
+      "legacy": 1.2175985998045888,
+      "migrated": 1.208090734707857,
+      "delta": -0.009507865096731738
+    },
+    {
+      "configuration_id": "data/nvidia--MiniMax-M3-NVFP4/b200-sxm/vllm/0.28.0/pure-tp4@aisim-commit-unknown-18d3fcf0",
+      "phase": "mixed",
+      "legacy": 18.855689729532983,
+      "migrated": 18.840756379564116,
+      "delta": -0.014933349968867304
+    },
+    {
+      "configuration_id": "data/nvidia--MiniMax-M3-NVFP4/b200-sxm/vllm/0.28.0/pure-tp4@aisim-commit-unknown-18d3fcf0",
+      "phase": "prefill",
+      "legacy": 11.985724226119308,
+      "migrated": 11.988964435732132,
+      "delta": 0.003240209612824785
+    }
+  ],
+  "regression_note": "Production bucket retention uses randomized Rust HashMap iteration for tied evictions; independent fresh models do not guarantee identical regression scores. Predictor code and ordered inputs are unchanged."
+}
