@@ -1,7 +1,8 @@
 # AISimulate review previews
 
 - [PR #417](https://github.com/ai-dynamo/aisimulate/pull/417): [FPM Gym preview](https://simone-chen.github.io/aisimulate-previews/pr-417/fpm-accuracy/?branch=main).
-- Dashboard source: `ai-dynamo/aisimulate` at `c58abb014e1602c26044ece407f08c1f2953da4e` (Apache-2.0).
+- Dashboard source: `ai-dynamo/aisimulate` at `4ebd2be084cc7551a82f9651b6011acdea16a214` (Apache-2.0).
+- Test-set summaries omit Unknown labels while retaining known collection information and Details links.
 - Request charts use compact, left-aligned cards: two columns within 1,000px on desktop, one column on mobile. Checked both themes with all 16 contributing chart runs; evaluation data is unchanged.
 - Qualified evaluation and complete 3D assets: Actions run `37988272681`, attempt `1`, October 9, 2026 UTC. AISim source `e45612e18376c6aef28fb697f3131602613354f4`; HF revision `ae9f4acc077f69b0a12bd7a558e3a6e4bf48550b`.
 - Details now shows all four request charts for 16 contributing runs across seven configurations, including recovered DeepSeek Pro B200/B300, GLM B200/GB200, and MiniMax B200 captures, plus Kimi. Mobile/desktop layouts, both themes, run URLs, availability banners, all five tabs and historical links were checked in Chromium.
