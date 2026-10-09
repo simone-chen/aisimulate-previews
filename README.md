@@ -1,7 +1,8 @@
 # AISimulate review previews
 
 - [PR #417](https://github.com/ai-dynamo/aisimulate/pull/417): [FPM Gym preview](https://simone-chen.github.io/aisimulate-previews/pr-417/fpm-accuracy/?branch=main).
-- Dashboard source: `ai-dynamo/aisimulate` at `8b4e86250d9e129d037d36666886d08fe62957fb` (Apache-2.0).
+- Dashboard source: `ai-dynamo/aisimulate` at `53b7802d4c77c698571497b453d73c9970c315ff` (Apache-2.0).
+- Collection summaries show distinct recorded concurrency settings; Details uses a Concurrency setting selector. Only the current snapshot summary gains display metadata derived from its pinned detail artifact. Scores, request charts, evaluation identity, and historical files are unchanged. Validation: 358 tests passed, 20 skipped, 138 subtests passed, plus browser checks.
 - Collection summaries omit the Test set prefix and Unknown labels while retaining known collection information and Details links.
 - Details organizes metadata into Dataset, Workload, and Collection with aligned label/value rows and a separate profiling summary. Verified desktop/mobile layouts in both themes.
 - Request charts use compact, left-aligned cards: two columns within 1,000px on desktop, one column on mobile. Checked both themes with all 16 contributing chart runs; evaluation data is unchanged.
