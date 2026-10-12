@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "default": "main",
+  "preview": true,
+  "branches": [
+    {
+      "name": "main",
+      "path": ".",
+      "status": "available"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "branches": [
+    {
+      "branch": "main",
+      "evaluated_revision": {
+        "branch": "main",
+        "commit_sha": "e46be717175acf06bdbbdeadb7aaf9bb2afdae8d"
+      },
+      "published_from_commit": "714e0188d1921ad90485670efa674cebc011011f",
+      "published_source_path": "pages/e2e-accuracy/summary.json",
+      "status": "evaluated",
+      "summary_path": "branches/0d6e4079e36703eb/summary.json"
+    },
+    {
+      "branch": "release/0.12.0",
+      "published_from_commit": "1f728534910187ecb2f021ef5e4bd4949bd555d0",
+      "published_source_path": "python/aisimulate/docs/e2e-accuracy/summary.json",
+      "status": "historical",
+      "summary_path": "branches/cb21c32489602c02/summary.json"
+    },
+    {
+      "branch": "release/0.12.1",
+      "published_from_commit": "468f05de53b4eab330fb6e354017277350292825",
+      "published_source_path": "python/aisimulate/docs/e2e-accuracy/summary.json",
+      "status": "historical",
+      "summary_path": "branches/c809a00d568307a7/summary.json"
+    },
+    {
+      "branch": "release/0.13.0",
+      "evaluated_revision": {
+        "branch": "main",
+        "commit_sha": "e46be717175acf06bdbbdeadb7aaf9bb2afdae8d"
+      },
+      "published_from_commit": "393452696ff49f0433667c04997d057d02a0f9c4",
+      "published_source_path": "pages/e2e-accuracy/summary.json",
+      "status": "inherited",
+      "summary_path": "branches/56f7532592fcef32/summary.json"
+    }
+  ],
+  "default_branch": "main",
+  "schema_version": 1
+}

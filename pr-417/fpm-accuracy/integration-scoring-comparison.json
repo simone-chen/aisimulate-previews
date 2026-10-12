@@ -1,0 +1,1140 @@
+{
+  "previous_run": "37988272681",
+  "current_run": "38318468113",
+  "previous_aisim_revision": "e45612e18376c6aef28fb697f3131602613354f4",
+  "aisim_revision": "2f0f4cd8606d580567b253d02f3d699fe36db865",
+  "evaluator_revision": "714e0188d1921ad90485670efa674cebc011011f",
+  "hf_revision": "562d958065e7695e6811561d3c78c1f648c70d3b",
+  "configurations": 29,
+  "measurement_counts_equal": true,
+  "changes": [
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-118ccc21",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 250.41833127989733,
+        "measured_count": 199013,
+        "predicted_count": 198933,
+        "tuning_error_count": 0,
+        "unavailable_count": 80
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 250.32151599101505,
+        "measured_count": 199013,
+        "predicted_count": 198933,
+        "tuning_error_count": 0,
+        "unavailable_count": 80
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-118ccc21",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 239.27123884924634,
+        "measured_count": 193575,
+        "predicted_count": 193555,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 239.1085958870412,
+        "measured_count": 193575,
+        "predicted_count": 193555,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-118ccc21",
+      "predictor": "regression",
+      "phase": "mixed",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 2378.159432395523,
+        "measured_count": 1044,
+        "predicted_count": 1024,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 2390.0882880418267,
+        "measured_count": 1044,
+        "predicted_count": 1024,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-118ccc21",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 245.54203083711263,
+        "measured_count": 4394,
+        "predicted_count": 4354,
+        "tuning_error_count": 0,
+        "unavailable_count": 40
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 245.54328359429078,
+        "measured_count": 4394,
+        "predicted_count": 4354,
+        "tuning_error_count": 0,
+        "unavailable_count": 40
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/pure-tp4@aisim-commit-f2a2b61b",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 2.321459557405322,
+        "measured_count": 157007,
+        "predicted_count": 156977,
+        "tuning_error_count": 0,
+        "unavailable_count": 30
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 2.268602697777739,
+        "measured_count": 157007,
+        "predicted_count": 156977,
+        "tuning_error_count": 0,
+        "unavailable_count": 30
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/pure-tp4@aisim-commit-f2a2b61b",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 1.5060221776227565,
+        "measured_count": 148964,
+        "predicted_count": 148954,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 1.5105391509187747,
+        "measured_count": 148964,
+        "predicted_count": 148954,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/pure-tp4@aisim-commit-f2a2b61b",
+      "predictor": "regression",
+      "phase": "mixed",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 11.520794967916652,
+        "measured_count": 3737,
+        "predicted_count": 3727,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 11.502493677529543,
+        "measured_count": 3737,
+        "predicted_count": 3727,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/pure-tp4@aisim-commit-f2a2b61b",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 22.613995961770947,
+        "measured_count": 4306,
+        "predicted_count": 4296,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 20.541853600313743,
+        "measured_count": 4306,
+        "predicted_count": 4296,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-4baad028",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 15.682867722354617,
+        "measured_count": 286,
+        "predicted_count": 276,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 15.738066622765539,
+        "measured_count": 286,
+        "predicted_count": 276,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/MiniMaxAI--MiniMax-M2.7/h200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-4baad028",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 9.47075024687193,
+        "measured_count": 254,
+        "predicted_count": 249,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 9.531934570218974,
+        "measured_count": 254,
+        "predicted_count": 249,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/dep4@aisim-commit-unknown-1cb1c4de",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 20.341152955978668,
+        "measured_count": 1356,
+        "predicted_count": 1336,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 17.889951611978127,
+        "measured_count": 1356,
+        "predicted_count": 1336,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/dep4@aisim-commit-unknown-1cb1c4de",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 25.92704724873472,
+        "measured_count": 648,
+        "predicted_count": 638,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 20.772051737995508,
+        "measured_count": 648,
+        "predicted_count": 638,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/dep4@aisim-commit-unknown-1cb1c4de",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 15.23542149641073,
+        "measured_count": 708,
+        "predicted_count": 698,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 15.255596482466553,
+        "measured_count": 708,
+        "predicted_count": 698,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-900fc3ca",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 17.2750029157643,
+        "measured_count": 1368,
+        "predicted_count": 1348,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 17.091855191759315,
+        "measured_count": 1368,
+        "predicted_count": 1348,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-900fc3ca",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 20.885588779251513,
+        "measured_count": 660,
+        "predicted_count": 650,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 20.73648923048358,
+        "measured_count": 660,
+        "predicted_count": 650,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Flash-0731/b200-sxm/vllm/0.25.1/tep4@aisim-commit-unknown-900fc3ca",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 13.912709489880827,
+        "measured_count": 708,
+        "predicted_count": 698,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 13.69785501243162,
+        "measured_count": 708,
+        "predicted_count": 698,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b200-sxm/vllm/0.28.0/dep8@aisim-commit-unknown-7c57d51e",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 4.25460400706919,
+        "measured_count": 68181,
+        "predicted_count": 68166,
+        "tuning_error_count": 0,
+        "unavailable_count": 15
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 4.230177917463469,
+        "measured_count": 68181,
+        "predicted_count": 68166,
+        "tuning_error_count": 0,
+        "unavailable_count": 15
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b200-sxm/vllm/0.28.0/dep8@aisim-commit-unknown-7c57d51e",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 3.5033370577857825,
+        "measured_count": 62748,
+        "predicted_count": 62738,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 3.4771228543229182,
+        "measured_count": 62748,
+        "predicted_count": 62738,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b200-sxm/vllm/0.28.0/dep8@aisim-commit-unknown-7c57d51e",
+      "predictor": "regression",
+      "phase": "mixed",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 12.937910172165681,
+        "measured_count": 5433,
+        "predicted_count": 5428,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 12.934151489923176,
+        "measured_count": 5433,
+        "predicted_count": 5428,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b300-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/dep8@aisim-commit-unknown-bf0f277d",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 1.8879658109966666,
+        "measured_count": 98227,
+        "predicted_count": 98217,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 2.156791314803034,
+        "measured_count": 98227,
+        "predicted_count": 98217,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b300-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/dep8@aisim-commit-unknown-bf0f277d",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 1.383690736705355,
+        "measured_count": 95462,
+        "predicted_count": 95457,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 1.6620820974376698,
+        "measured_count": 95462,
+        "predicted_count": 95457,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/b300-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/dep8@aisim-commit-unknown-bf0f277d",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 19.32875775542553,
+        "measured_count": 2765,
+        "predicted_count": 2760,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 19.26673977931186,
+        "measured_count": 2765,
+        "predicted_count": 2760,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/dep8@aisim-commit-unknown-6cdbf517",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 0.6326456783237298,
+        "measured_count": 295362,
+        "predicted_count": 295352,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 0.6261796754224846,
+        "measured_count": 295362,
+        "predicted_count": 295352,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/dep8@aisim-commit-unknown-6cdbf517",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 0.479532628859299,
+        "measured_count": 290353,
+        "predicted_count": 290348,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 0.47955075539052683,
+        "measured_count": 290353,
+        "predicted_count": 290348,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/dep8@aisim-commit-unknown-6cdbf517",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 9.51675193050167,
+        "measured_count": 5009,
+        "predicted_count": 5004,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 9.134056108963287,
+        "measured_count": 5009,
+        "predicted_count": 5004,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/tep8@aisim-commit-unknown-a90be082",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 0.5291292988567445,
+        "measured_count": 416082,
+        "predicted_count": 416072,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 0.5359640963521228,
+        "measured_count": 416082,
+        "predicted_count": 416072,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/tep8@aisim-commit-unknown-a90be082",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 0.44646859818428436,
+        "measured_count": 403984,
+        "predicted_count": 403979,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 0.453486685263109,
+        "measured_count": 403984,
+        "predicted_count": 403979,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/deepseek-ai--DeepSeek-V4-Pro/gb300/vllm/0.26.0/tep8@aisim-commit-unknown-a90be082",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 3.2904943196919616,
+        "measured_count": 12098,
+        "predicted_count": 12093,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 3.291206141694834,
+        "measured_count": 12098,
+        "predicted_count": 12093,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/moonshotai--Kimi-K3/gb300/vllm/0.1.dev19262/tep8@aisim-commit-unknown-25aaa262",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 1.8336742334288365,
+        "measured_count": 284398,
+        "predicted_count": 284378,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 1.8361025490447158,
+        "measured_count": 284398,
+        "predicted_count": 284378,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/moonshotai--Kimi-K3/gb300/vllm/0.1.dev19262/tep8@aisim-commit-unknown-25aaa262",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 1.3728704047468065,
+        "measured_count": 268806,
+        "predicted_count": 268801,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 1.3756073254954815,
+        "measured_count": 268806,
+        "predicted_count": 268801,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/moonshotai--Kimi-K3/gb300/vllm/0.1.dev19262/tep8@aisim-commit-unknown-25aaa262",
+      "predictor": "regression",
+      "phase": "mixed",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 10.339072616126066,
+        "measured_count": 2181,
+        "predicted_count": 2176,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 10.338590966028478,
+        "measured_count": 2181,
+        "predicted_count": 2176,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/moonshotai--Kimi-K3/gb300/vllm/0.1.dev19262/tep8@aisim-commit-unknown-25aaa262",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 9.695534025444907,
+        "measured_count": 13411,
+        "predicted_count": 13401,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 9.692244761558294,
+        "measured_count": 13411,
+        "predicted_count": 13401,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/pure-tp8@aisim-commit-unknown-0c6e5219",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 0.8735357701188972,
+        "measured_count": 228769,
+        "predicted_count": 228759,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 0.8733244548170792,
+        "measured_count": 228769,
+        "predicted_count": 228759,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/sglang/git-71de97b264b0-fpm-ed18d64951b9/pure-tp8@aisim-commit-unknown-0c6e5219",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 8.615798742066453,
+        "measured_count": 809,
+        "predicted_count": 804,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 8.555674019269551,
+        "measured_count": 809,
+        "predicted_count": 804,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/vllm/0.25.1/dep8@aisim-commit-e0de0183",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 12.387773131228807,
+        "measured_count": 274,
+        "predicted_count": 264,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 12.51446645537872,
+        "measured_count": 274,
+        "predicted_count": 264,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/vllm/0.25.1/dep8@aisim-commit-e0de0183",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 6.9160654960239025,
+        "measured_count": 228,
+        "predicted_count": 223,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 7.066052211609451,
+        "measured_count": 228,
+        "predicted_count": 223,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/vllm/0.25.1/tep8@aisim-commit-e0de0183",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 25.950163932440724,
+        "measured_count": 256,
+        "predicted_count": 246,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 25.867371594540316,
+        "measured_count": 256,
+        "predicted_count": 246,
+        "tuning_error_count": 0,
+        "unavailable_count": 10
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/b200-sxm/vllm/0.25.1/tep8@aisim-commit-e0de0183",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 8.59027058495768,
+        "measured_count": 210,
+        "predicted_count": 205,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 8.49091977947719,
+        "measured_count": 210,
+        "predicted_count": 205,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 2.157241329641199,
+        "measured_count": 91330,
+        "predicted_count": 91310,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 2.162726284848138,
+        "measured_count": 91330,
+        "predicted_count": 91310,
+        "tuning_error_count": 0,
+        "unavailable_count": 20
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 2.143349585512806,
+        "measured_count": 90983,
+        "predicted_count": 90968,
+        "tuning_error_count": 0,
+        "unavailable_count": 15
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 2.148855161758799,
+        "measured_count": 90983,
+        "predicted_count": 90968,
+        "tuning_error_count": 0,
+        "unavailable_count": 15
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 4.104077943012153,
+        "measured_count": 167,
+        "predicted_count": 162,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 4.104077943012152,
+        "measured_count": 167,
+        "predicted_count": 162,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "predictor": "warmup",
+      "phase": "all",
+      "previous": {
+        "error_count": 39,
+        "mape_pct": 5.261883939220406,
+        "measured_count": 91330,
+        "predicted_count": 91291,
+        "tuning_error_count": 0,
+        "unavailable_count": 0
+      },
+      "current": {
+        "error_count": 39,
+        "mape_pct": 5.262197188213077,
+        "measured_count": 91330,
+        "predicted_count": 91291,
+        "tuning_error_count": 0,
+        "unavailable_count": 0
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "predictor": "warmup",
+      "phase": "decode",
+      "previous": {
+        "error_count": 38,
+        "mape_pct": 5.146711876014416,
+        "measured_count": 90983,
+        "predicted_count": 90945,
+        "tuning_error_count": 0,
+        "unavailable_count": 0
+      },
+      "current": {
+        "error_count": 38,
+        "mape_pct": 5.147018518272752,
+        "measured_count": 90983,
+        "predicted_count": 90945,
+        "tuning_error_count": 0,
+        "unavailable_count": 0
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "predictor": "warmup",
+      "phase": "mixed",
+      "previous": {
+        "error_count": 1,
+        "mape_pct": 52.6279580265875,
+        "measured_count": 180,
+        "predicted_count": 179,
+        "tuning_error_count": 0,
+        "unavailable_count": 0
+      },
+      "current": {
+        "error_count": 1,
+        "mape_pct": 52.6324544950459,
+        "measured_count": 180,
+        "predicted_count": 179,
+        "tuning_error_count": 0,
+        "unavailable_count": 0
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--GLM-5.2-NVFP4/gb200/vllm/0.28.0/dep16@aisim-commit-82ffa025",
+      "predictor": "warmup",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 17.212758350178813,
+        "measured_count": 167,
+        "predicted_count": 167,
+        "tuning_error_count": 0,
+        "unavailable_count": 0
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 17.2121856900096,
+        "measured_count": 167,
+        "predicted_count": 167,
+        "tuning_error_count": 0,
+        "unavailable_count": 0
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--MiniMax-M3-NVFP4/b200-sxm/vllm/0.28.0/pure-tp4@aisim-commit-unknown-18d3fcf0",
+      "predictor": "regression",
+      "phase": "all",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 1.3636232291022552,
+        "measured_count": 313358,
+        "predicted_count": 313343,
+        "tuning_error_count": 0,
+        "unavailable_count": 15
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 1.363576873305348,
+        "measured_count": 313358,
+        "predicted_count": 313343,
+        "tuning_error_count": 0,
+        "unavailable_count": 15
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--MiniMax-M3-NVFP4/b200-sxm/vllm/0.28.0/pure-tp4@aisim-commit-unknown-18d3fcf0",
+      "predictor": "regression",
+      "phase": "decode",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 1.208090734707857,
+        "measured_count": 310492,
+        "predicted_count": 310487,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 1.208207231050385,
+        "measured_count": 310492,
+        "predicted_count": 310487,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--MiniMax-M3-NVFP4/b200-sxm/vllm/0.28.0/pure-tp4@aisim-commit-unknown-18d3fcf0",
+      "predictor": "regression",
+      "phase": "mixed",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 18.840756379564116,
+        "measured_count": 2624,
+        "predicted_count": 2619,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 18.817733361568738,
+        "measured_count": 2624,
+        "predicted_count": 2619,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    },
+    {
+      "configuration_id": "data/nvidia--MiniMax-M3-NVFP4/b200-sxm/vllm/0.28.0/pure-tp4@aisim-commit-unknown-18d3fcf0",
+      "predictor": "regression",
+      "phase": "prefill",
+      "previous": {
+        "error_count": 0,
+        "mape_pct": 11.988964435732132,
+        "measured_count": 242,
+        "predicted_count": 237,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "current": {
+        "error_count": 0,
+        "mape_pct": 12.029476755385794,
+        "measured_count": 242,
+        "predicted_count": 237,
+        "tuning_error_count": 0,
+        "unavailable_count": 5
+      },
+      "previous_status": "evaluated",
+      "status": "evaluated"
+    }
+  ],
+  "note": "Predictor source advances to current main. Filename changes alter path-based membership hashes. Independent regression runs can vary due to randomized retention."
+}

@@ -6,7 +6,7 @@
       "branch": "main",
       "status": "available",
       "summary_path": "branches/0d6e4079e36703eb/summary.json",
-      "head_sha": "80110522690390315bc2fe25f4266c59dcf0baeb"
+      "head_sha": "2f0f4cd8606d580567b253d02f3d699fe36db865"
     },
     {
       "branch": "release/0.12.0",

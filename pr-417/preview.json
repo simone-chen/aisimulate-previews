@@ -1,7 +1,8 @@
 {
   "pull_request": "https://github.com/ai-dynamo/aisimulate/pull/417",
-  "source_commit": "4ee164315c182f5b89ad3b4e93f3cc40794fc8dc",
-  "data_run_id": 37880548507,
-  "evaluation_run_id": 37880548507,
-  "hf_revision": "f0b06f11a2ebdf298e6eb1eec37a2acb7c30b231"
+  "source_commit": "714e0188d1921ad90485670efa674cebc011011f",
+  "predictor_commit": "2f0f4cd8606d580567b253d02f3d699fe36db865",
+  "data_run_id": 38318468113,
+  "evaluation_run_id": 38318468113,
+  "hf_revision": "562d958065e7695e6811561d3c78c1f648c70d3b"
 }
