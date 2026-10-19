@@ -1,0 +1,413 @@
+{
+  "baseline": {
+    "run_id": "39237616407",
+    "commit": "c9e7363bf5983b980fe6622f7b064ee7adff5f5d",
+    "source": "db-dump/2026-09-28",
+    "selected": 2281,
+    "published": 2071,
+    "outcomes": {
+      "evaluated": 2071,
+      "unsupported": 210
+    },
+    "configuration": {
+      "counts": {
+        "estimated": 2031,
+        "verified": 40
+      },
+      "profile": "coverage-experiment/1"
+    },
+    "totals": {
+      "aic": {
+        "coverage_pct": 62.68,
+        "points": 1298,
+        "status_counts": {
+          "failed": 773,
+          "success": 1298,
+          "unknown": 0,
+          "unsupported": 0
+        },
+        "tpot_mape_pct": 22.25,
+        "tpot_shape_error_pct": 12.05,
+        "ttft_mape_pct": 48.02,
+        "ttft_shape_error_pct": 38.41
+      },
+      "aisimulate": {
+        "coverage_pct": 76.48,
+        "points": 1584,
+        "status_counts": {
+          "failed": 487,
+          "success": 1584,
+          "unknown": 0,
+          "unsupported": 0
+        },
+        "tpot_mape_pct": 22.39,
+        "tpot_shape_error_pct": 11.83,
+        "ttft_mape_pct": 45.27,
+        "ttft_shape_error_pct": 33.2
+      },
+      "by_configuration_quality": {
+        "estimated": {
+          "aic": {
+            "coverage_pct": 63.12,
+            "points": 1282,
+            "status_counts": {
+              "failed": 749,
+              "success": 1282,
+              "unknown": 0,
+              "unsupported": 0
+            },
+            "tpot_mape_pct": 21.6,
+            "tpot_shape_error_pct": 12.06,
+            "ttft_mape_pct": 47.72,
+            "ttft_shape_error_pct": 38.17
+          },
+          "aisimulate": {
+            "points": 1552,
+            "tpot_mape_pct": 21.66,
+            "tpot_shape_error_pct": 11.89,
+            "ttft_mape_pct": 45.29,
+            "ttft_shape_error_pct": 33.34
+          },
+          "rows": 2031
+        },
+        "verified": {
+          "aic": {
+            "coverage_pct": 40.0,
+            "points": 16,
+            "status_counts": {
+              "failed": 24,
+              "success": 16,
+              "unknown": 0,
+              "unsupported": 0
+            },
+            "tpot_mape_pct": 74.7,
+            "tpot_shape_error_pct": 10.83,
+            "ttft_mape_pct": 72.05,
+            "ttft_shape_error_pct": 62.49
+          },
+          "aisimulate": {
+            "points": 32,
+            "tpot_mape_pct": 57.6,
+            "tpot_shape_error_pct": 8.46,
+            "ttft_mape_pct": 43.97,
+            "ttft_shape_error_pct": 25.53
+          },
+          "rows": 40
+        }
+      },
+      "frameworks": [
+        "dynamo-sglang",
+        "dynamo-trt",
+        "dynamo-vllm",
+        "sglang",
+        "trt",
+        "vllm"
+      ],
+      "gpu_skus": [
+        "b200",
+        "b300",
+        "gb200",
+        "gb300",
+        "h100",
+        "h200"
+      ],
+      "models": 21,
+      "precisions": [
+        "bf16",
+        "fp4",
+        "fp8",
+        "int4"
+      ],
+      "rows": 2071,
+      "workloads": [
+        "1024:1024",
+        "1024:8192",
+        "8192:1024"
+      ]
+    }
+  },
+  "hf": {
+    "run_id": "39306484930",
+    "commit": "6215ed1a8859608c760d6866b9d237c7cf34aa03",
+    "source": "hf/8ec77d043d236ae92aa0cee6a9896f8195ea7718",
+    "selected": 1974,
+    "published": 1745,
+    "outcomes": {
+      "evaluated": 1745,
+      "unsupported": 229
+    },
+    "configuration": {
+      "counts": {
+        "estimated": 1715,
+        "verified": 30
+      },
+      "profile": "coverage-experiment/1"
+    },
+    "totals": {
+      "aic": {
+        "coverage_pct": 59.77,
+        "points": 1043,
+        "status_counts": {
+          "failed": 702,
+          "success": 1043,
+          "unknown": 0,
+          "unsupported": 0
+        },
+        "tpot_mape_pct": 21.07,
+        "tpot_shape_error_pct": 10.33,
+        "ttft_mape_pct": 47.39,
+        "ttft_shape_error_pct": 37.24
+      },
+      "aisimulate": {
+        "coverage_pct": 75.36,
+        "points": 1315,
+        "status_counts": {
+          "failed": 430,
+          "success": 1315,
+          "unknown": 0,
+          "unsupported": 0
+        },
+        "tpot_mape_pct": 22.03,
+        "tpot_shape_error_pct": 11.0,
+        "ttft_mape_pct": 47.04,
+        "ttft_shape_error_pct": 34.95
+      },
+      "by_configuration_quality": {
+        "estimated": {
+          "aic": {
+            "coverage_pct": 60.35,
+            "points": 1035,
+            "status_counts": {
+              "failed": 680,
+              "success": 1035,
+              "unknown": 0,
+              "unsupported": 0
+            },
+            "tpot_mape_pct": 20.37,
+            "tpot_shape_error_pct": 10.28,
+            "ttft_mape_pct": 47.28,
+            "ttft_shape_error_pct": 37.18
+          },
+          "aisimulate": {
+            "points": 1291,
+            "tpot_mape_pct": 21.12,
+            "tpot_shape_error_pct": 11.01,
+            "ttft_mape_pct": 46.96,
+            "ttft_shape_error_pct": 35.07
+          },
+          "rows": 1715
+        },
+        "verified": {
+          "aic": {
+            "coverage_pct": 26.67,
+            "points": 8,
+            "status_counts": {
+              "failed": 22,
+              "success": 8,
+              "unknown": 0,
+              "unsupported": 0
+            },
+            "tpot_mape_pct": 111.01,
+            "tpot_shape_error_pct": 18.88,
+            "ttft_mape_pct": 61.33,
+            "ttft_shape_error_pct": 48.71
+          },
+          "aisimulate": {
+            "points": 24,
+            "tpot_mape_pct": 70.67,
+            "tpot_shape_error_pct": 10.77,
+            "ttft_mape_pct": 51.64,
+            "ttft_shape_error_pct": 27.04
+          },
+          "rows": 30
+        }
+      },
+      "frameworks": [
+        "dynamo-sglang",
+        "dynamo-trt",
+        "dynamo-vllm",
+        "sglang",
+        "trt",
+        "vllm"
+      ],
+      "gpu_skus": [
+        "b200",
+        "b300",
+        "gb200",
+        "gb300",
+        "h100",
+        "h200"
+      ],
+      "models": 20,
+      "precisions": [
+        "bf16",
+        "fp4",
+        "fp8",
+        "int4"
+      ],
+      "rows": 1745,
+      "workloads": [
+        "1024:1024",
+        "1024:8192",
+        "8192:1024"
+      ]
+    }
+  },
+  "input_comparison": {
+    "db_selected": 2281,
+    "hf_selected": 1974,
+    "shared": 1957,
+    "db_only": 324,
+    "hf_only": 17,
+    "changed_fields_on_shared": {
+      "isl": 0,
+      "osl": 0,
+      "conc": 0,
+      "metrics": 0,
+      "image": 0,
+      "date": 0
+    },
+    "producer_field_changes_on_shared": {
+      "github_run_id": 0,
+      "run_attempt": 0,
+      "head_sha": 0,
+      "head_branch": 0,
+      "run_started_at": 1957,
+      "recipe_fingerprint": 0,
+      "server_log_id": 1957
+    },
+    "db_only_absent_from_HF_cache": 324,
+    "db_only_present_but_filtered_in_HF": 0,
+    "producer_start_instant_changes": 1625,
+    "reviewed_archive_lookup_on_shared": {
+      "db": {
+        "reviewed_archived_recipe_found": 69,
+        "identity_mismatch": 0
+      },
+      "hf": {
+        "reviewed_archived_recipe_found": 0,
+        "identity_mismatch": 89
+      }
+    },
+    "configuration_grouping": {
+      "db_configs_on_shared": 549,
+      "hf_configs_on_shared": 549,
+      "db_configs_split_in_HF": 0,
+      "hf_configs_merging_DB_configs": 0
+    },
+    "measurement_job_seconds": {
+      "db": 1147,
+      "hf": 200
+    }
+  },
+  "comparison": {
+    "matching": "model, workload, GPU, framework, precision, serving topology, concurrency, exact producer run",
+    "shared_keys": 1727,
+    "unambiguous_shared_points": 1726,
+    "ambiguous_shared_keys": 1,
+    "baseline_only_keys": 343,
+    "hf_only_keys": 17,
+    "measurement_changes": 0,
+    "configuration_changes": 0,
+    "quality_transitions": {
+      "estimated -> estimated": 1696,
+      "verified -> verified": 30
+    },
+    "aisimulate": {
+      "status_transitions": {
+        "success -> success": 1296,
+        "failed -> failed": 430
+      },
+      "metrics": {
+        "ttft_ms": {
+          "comparable": 1296,
+          "changed": 35,
+          "max_absolute_delta": 34558.76709504744,
+          "max_relative_delta_pct": 1221.9777850304883
+        },
+        "tpot_ms": {
+          "comparable": 1296,
+          "changed": 35,
+          "max_absolute_delta": 71.45695389594927,
+          "max_relative_delta_pct": 188.89694542312765
+        },
+        "e2e_ms": {
+          "comparable": 1296,
+          "changed": 35,
+          "max_absolute_delta": 66115.62401578379,
+          "max_relative_delta_pct": 80.57784240829868
+        },
+        "output_per_gpu": {
+          "comparable": 1296,
+          "changed": 35,
+          "max_absolute_delta": 4984.422038970234,
+          "max_relative_delta_pct": 45.08904153230252
+        },
+        "total_per_gpu": {
+          "comparable": 1296,
+          "changed": 35,
+          "max_absolute_delta": 9969.888748178093,
+          "max_relative_delta_pct": 45.089041532302524
+        }
+      }
+    },
+    "aic": {
+      "status_transitions": {
+        "success -> success": 1025,
+        "failed -> failed": 697,
+        "success -> failed": 4
+      },
+      "metrics": {
+        "ttft_ms": {
+          "comparable": 1025,
+          "changed": 22,
+          "max_absolute_delta": 22.421999999999997,
+          "max_relative_delta_pct": 9.28554863503843
+        },
+        "tpot_ms": {
+          "comparable": 1025,
+          "changed": 21,
+          "max_absolute_delta": 10.590000000000003,
+          "max_relative_delta_pct": 42.1845124282983
+        },
+        "e2e_ms": {
+          "comparable": 1025,
+          "changed": 22,
+          "max_absolute_delta": 10855.991999999998,
+          "max_relative_delta_pct": 41.87805791829173
+        },
+        "output_per_gpu": {
+          "comparable": 1025,
+          "changed": 19,
+          "max_absolute_delta": 464.2883333333334,
+          "max_relative_delta_pct": 29.664923195436998
+        },
+        "total_per_gpu": {
+          "comparable": 0,
+          "changed": 0,
+          "max_absolute_delta": null,
+          "max_relative_delta_pct": null
+        }
+      }
+    }
+  },
+  "parity": {
+    "achieved": false,
+    "reviewed_launcher_binding": {
+      "model": "nvidia/MiniMax-M2.5-NVFP4",
+      "hardware": "b300",
+      "framework": "dynamo-vllm",
+      "producer_run_id": "26857293503",
+      "db_matches": 35,
+      "hf_matches": 0,
+      "cause": "launcher_recipe_sources.json binds reviewed points to numeric database configuration IDs; HF content IDs miss the match and choose the generic recipe path"
+    },
+    "reviewed_runtime_binding": "Legacy reviewed runtime records also bind database row identities; 89 HF rows fail the local archive identity check. Complete CI still qualifies by explicitly excluding unresolved sources."
+  },
+  "browser_checks": {
+    "desktop": "passed",
+    "mobile": "passed",
+    "details_charts_and_point_dialog": "passed",
+    "javascript_errors": 0
+  }
+}

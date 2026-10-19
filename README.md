@@ -12,3 +12,10 @@
 - Historical evaluation files retain their original data. Request charts remain unavailable where matching request exports were disabled or not recovered; no measurements are invented.
 - Built with `scripts/pages/build_pages_site.py` from qualified Actions artifacts. This is a manually published review snapshot and does not automatically follow PR pushes. Neither PR has been merged; production Pages and HF main are unchanged.
 - Original copyright, license, and attribution notices are preserved in `LICENSE`, `THIRD_PARTY_NOTICES.md`, and copied assets.
+
+## PR #512: E2E HF input migration
+
+- [Preview and comparison](https://simone-chen.github.io/aisimulate-previews/pr-512/): HF-backed E2E Gym plus the DB baseline.
+- [Pipeline](https://github.com/ai-dynamo/aisimulate/actions/runs/39306484930) passed all four prediction shards and final qualification at `6215ed1a8859608c760d6866b9d237c7cf34aa03`.
+- Numerical parity is not achieved: the cohort differs, and DB-ID bindings affect reviewed runtime/launcher evidence. Of 1,296 matched successful replay points, 35 differ; all are MiniMax-M2.5 NVFP4 on B300 with Dynamo-vLLM.
+- [Provenance and validation](pr-512/README.md). This isolated preview preserves the existing PR #417 deployment and does not update production Pages.
