@@ -8,7 +8,8 @@
 <p><a href="https://github.com/ai-dynamo/aisimulate/actions/runs/39306484930">HF preview run</a> evaluated <code>6215ed1a8859608c760d6866b9d237c7cf34aa03</code>.
 <a href="https://github.com/ai-dynamo/aisimulate/actions/runs/39237616407">DB baseline run</a> evaluated <code>c9e7363bf5983b980fe6622f7b064ee7adff5f5d</code>.</p>
 <table><thead><tr><th>Measure</th><th>DB baseline</th><th>HF preview</th></tr></thead><tbody><tr><th>Selected inputs</th><td>2281</td><td>1974</td></tr><tr><th>Published rows</th><td>2071</td><td>1745</td></tr><tr><th>Successful AISim replays</th><td>1584</td><td>1315</td></tr><tr><th>AISim TTFT MAPE (%)</th><td>45.27</td><td>47.04</td></tr><tr><th>AISim TPOT MAPE (%)</th><td>22.39</td><td>22.03</td></tr></tbody></table>
-<h2>What changed</h2>
+<p>The fixes are pushed at <code>30b264ae91bf5a4fdad1ab75d3a85114f2e09094</code>. The <a href="https://github.com/ai-dynamo/aisimulate/actions/runs/39335708203">fresh combined campaign</a> is pending. <a href="input-comparison.json">Current input/evidence audit</a>: all 124 affected STP deployment outcomes match. The dashboard and numerical comparison below still describe the earlier run.</p>
+<h2>What changed in the earlier run</h2>
 <ul><li>The HF current-view cohort has 324 fewer historical inputs and 17 new inputs. All 1,957 shared benchmark IDs retain identical measured metrics, workloads and images. Their 549 configurations retain one-to-one grouping.</li>
 <li>Among 1,726 unambiguously matched published points, measurements and reported backend configurations agree. One ambiguous key is excluded from numerical matching.</li>
 <li>Of 1,296 matched successful AISim replays, 1,261 match and 35 differ (tolerance: 1e-9 relative/absolute). All 35 differences are MiniMax-M2.5 NVFP4 / B300 / Dynamo-vLLM. The reviewed launcher mapping binds DB configuration IDs; HF IDs miss it and choose a different recipe path.</li>

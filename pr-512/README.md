@@ -17,3 +17,19 @@
 
 - `e2e-accuracy/summary.json`: SHA-256 `f743edcaac80fb5f8f91b1ac30075d31be0cf05609af8f134aa3df33a044ed89`.
 - `db-baseline/summary.json`: SHA-256 `0b4abf753ba7f41273aebda68d02028200cfe8c7360187ff6ff106ebc6f52e2d`.
+
+## Pending migration validation
+
+- The dashboard above still contains the earlier campaign. The corrected stack is
+  `30b264ae91bf5a4fdad1ab75d3a85114f2e09094`; its [fresh campaign](https://github.com/ai-dynamo/aisimulate/actions/runs/39335708203) is awaiting runner capacity.
+- [Input audit](input-comparison.json) records the exact pinned table hashes,
+  DB v3 / HF v2 selection and exclusion counts, shared identities, and evidence
+  binding checks for the corrected stack. It does not certify replay parity.
+- All 124 affected STP cases have matching complete deployment outcomes:
+  93 resolved, 31 unresolved for the same reasons.
+- `python3 pr-512/compare.py` regenerates `comparison.json` from the qualified
+  summaries currently present. It validates summary hashes, compares shared STP
+  metrics, excludes ambiguous keys, and counts STP/MTP results separately.
+- Predictor source under `python/aisimulate/src` and `crates` is unchanged between
+  the DB baseline commit and the corrected stack. The workflow will build a new
+  wheel; source equivalence does not imply byte-identical wheel artifacts.

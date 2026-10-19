@@ -1,0 +1,70 @@
+{
+  "schema": "hf-migration-input-audit/1",
+  "hf_revision": "8ec77d043d236ae92aa0cee6a9896f8195ea7718",
+  "db_release": "db-dump/2026-09-28",
+  "table_sha256": {
+    "db": "9125257cb98e195918fee2ee451d9ee4057fed5fab40e0da43cfc054d4a2330a",
+    "hf": "1815c558eada923ef0bcec2ebee00e7a8d1cdad2ee0498df877cf174b03e1ecc"
+  },
+  "selection": {
+    "db": {
+      "input_rows": 85309,
+      "counts": {
+        "measurement_date_through": "2026-09-27",
+        "selected": 3320,
+        "excluded": {
+          "source_filter": 32084,
+          "stale": 1293,
+          "superseded_image": 978,
+          "superseded_row": 47634
+        }
+      },
+      "decoding": {
+        "none": 2281,
+        "mtp": 1039
+      }
+    },
+    "hf": {
+      "input_rows": 7743,
+      "counts": {
+        "measurement_date_through": "2026-10-19",
+        "selected": 2855,
+        "excluded": {
+          "source_filter": 3306,
+          "stale": 1009,
+          "superseded_image": 572,
+          "superseded_row": 1
+        }
+      },
+      "decoding": {
+        "none": 1974,
+        "mtp": 881
+      }
+    }
+  },
+  "overlap": {
+    "shared": 2829,
+    "all_shared_nontransport_fields_equal": true,
+    "shared_decoding": {
+      "none": 1957,
+      "mtp": 872
+    },
+    "db_only": {
+      "mtp": 167,
+      "none": 324
+    },
+    "hf_only": {
+      "none": 17,
+      "mtp": 9
+    }
+  },
+  "evidence_binding_audit": {
+    "matched_launcher_recipe": 35,
+    "matched_archived_parsed": 69,
+    "matched_archived_workload": 20
+  },
+  "complete_deployment_audit": {
+    "matching_resolved": 93,
+    "matching_unresolved": 31
+  }
+}
