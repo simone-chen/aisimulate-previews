@@ -1,35 +1,29 @@
-# PR #512: HF E2E input migration preview
+# PR #512: HF E2E migration preview
 
-- Pipeline and qualification passed; numerical parity is not achieved.
-- [HF dashboard](e2e-accuracy/) and [DB baseline](db-baseline/).
-- [Comparison report](comparison.json) records cohort differences, matched metrics and known DB-identity binding gaps.
-- HF run: https://github.com/ai-dynamo/aisimulate/actions/runs/39306484930, attempt 1.
-- Baseline run: https://github.com/ai-dynamo/aisimulate/actions/runs/39237616407, attempt 1.
-- HF dashboard source: `ai-dynamo/aisimulate` commit `6215ed1a8859608c760d6866b9d237c7cf34aa03`, files `pages/e2e-accuracy/{index.html,styles.css,app.js}`.
-- Baseline dashboard source: the same paths at `c9e7363bf5983b980fe6622f7b064ee7adff5f5d`.
+- [HF dashboard](e2e-accuracy/) · [DB baseline](db-baseline/) · [Comparison report](comparison.json) · [Input audit](input-comparison.json).
+- [Fresh campaign](https://github.com/ai-dynamo/aisimulate/actions/runs/39335708203) passed all four shards and qualification on `30b264ae91bf5a4fdad1ab75d3a85114f2e09094`.
+- Full CI passed for [#512](https://github.com/ai-dynamo/aisimulate/actions/runs/39335694165) and [#513](https://github.com/ai-dynamo/aisimulate/actions/runs/39335666300) at their current heads.
+- All 1,321 matched successful AISim STP predictions agree exactly across TTFT, TPOT, E2E latency and both throughput metrics. All 1,052 matched successful AIC predictions agree across available metrics. This includes the previously differing 35 MiniMax cases.
+- All 1,754 unambiguous shared published points retain the same measurements, configurations and prediction statuses. One ambiguous matching key is excluded.
+- HF selects 1,974 STP + 881 MTP inputs. It publishes 1,773 STP points (1,340 successful, 433 failed) and 197 MTP points (194 successful, 3 failed). Source resolution excludes 201 STP + 684 MTP points. Missing/shared observed acceptance remains unresolved; no values are fitted to measured latency.
+- The DB baseline is STP-only. MTP results demonstrate fresh evaluation, not DB/HF numerical parity. The cohorts differ, so aggregate MAPE changes are not predictor regression evidence.
+
+## Reproduce and provenance
+
+- Run `python3 pr-512/compare.py` to verify qualification hashes and regenerate the comparison from the public summaries.
+- DB baseline: [run 39237616407](https://github.com/ai-dynamo/aisimulate/actions/runs/39237616407), commit `c9e7363bf5983b980fe6622f7b064ee7adff5f5d`.
+- HF UI: `pages/e2e-accuracy/{index.html,styles.css,app.js}` at `30b264ae91bf5a4fdad1ab75d3a85114f2e09094`. DB UI retains the baseline commit's files.
+- Predictor source under `python/aisimulate/src` and `crates` is unchanged between those commits. Wheels have distinct hashes; this is a same-source comparison, not a byte-identical-wheel comparison.
+- HF revision: `8ec77d043d236ae92aa0cee6a9896f8195ea7718`; DB release: `db-dump/2026-09-28`. Measurement attribution: SemiAnalysis InferenceX.
+- The input audit records pinned table hashes, selection/exclusion counts, cohort overlap and complete deployment equality for all 124 affected STP cases (93 resolved, 31 equally unresolved).
+- Summary and qualification bytes are copied unchanged from CI. Only qualified public payloads and aggregate evidence are published; private cache rows, logs, encrypted artifacts and tokens are excluded.
 - Dashboard files retain NVIDIA copyright and Apache-2.0 notices; root LICENSE and THIRD_PARTY_NOTICES.md are preserved.
-- Measurement attribution: SemiAnalysis InferenceX. HF source: private `ai-dynamo/aisim-infx-cache` at `8ec77d043d236ae92aa0cee6a9896f8195ea7718`.
-- Only validated dashboard payloads and aggregate comparisons are published. Raw HF observations, encrypted CI evidence and tokens are excluded.
-- Summary and qualification files are copied unchanged from their CI artifacts. Hashes and campaign identity were verified locally.
-- Chromium: HF overview, details charts, point dialog, mobile overflow and JavaScript error checks passed; the DB baseline also rendered successfully.
+
+## Browser validation
+
+- Chromium passed on the unmodified qualified payload: real MTP filtering, totals after reload, three detail charts, keyboard point-dialog activation with depth/acceptance labels, and mobile overflow checks. No JavaScript errors.
 
 ## Summary hashes
 
-- `e2e-accuracy/summary.json`: SHA-256 `f743edcaac80fb5f8f91b1ac30075d31be0cf05609af8f134aa3df33a044ed89`.
-- `db-baseline/summary.json`: SHA-256 `0b4abf753ba7f41273aebda68d02028200cfe8c7360187ff6ff106ebc6f52e2d`.
-
-## Pending migration validation
-
-- The dashboard above still contains the earlier campaign. The corrected stack is
-  `30b264ae91bf5a4fdad1ab75d3a85114f2e09094`; its [fresh campaign](https://github.com/ai-dynamo/aisimulate/actions/runs/39335708203) is awaiting runner capacity.
-- [Input audit](input-comparison.json) records the exact pinned table hashes,
-  DB v3 / HF v2 selection and exclusion counts, shared identities, and evidence
-  binding checks for the corrected stack. It does not certify replay parity.
-- All 124 affected STP cases have matching complete deployment outcomes:
-  93 resolved, 31 unresolved for the same reasons.
-- `python3 pr-512/compare.py` regenerates `comparison.json` from the qualified
-  summaries currently present. It validates summary hashes, compares shared STP
-  metrics, excludes ambiguous keys, and counts STP/MTP results separately.
-- Predictor source under `python/aisimulate/src` and `crates` is unchanged between
-  the DB baseline commit and the corrected stack. The workflow will build a new
-  wheel; source equivalence does not imply byte-identical wheel artifacts.
+- HF: SHA-256 `3edfa0c0ee23935cf097ee75e55766a0f64c72102c3a789b51a942e4f13456ee`.
+- DB: SHA-256 `0b4abf753ba7f41273aebda68d02028200cfe8c7360187ff6ff106ebc6f52e2d`.

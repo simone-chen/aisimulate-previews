@@ -127,99 +127,99 @@
     }
   },
   "hf": {
-    "run_id": "39306484930",
-    "commit": "6215ed1a8859608c760d6866b9d237c7cf34aa03",
+    "run_id": "39335708203",
+    "commit": "30b264ae91bf5a4fdad1ab75d3a85114f2e09094",
     "source": "hf/8ec77d043d236ae92aa0cee6a9896f8195ea7718",
-    "selected": 1974,
-    "published": 1745,
+    "selected": 2855,
+    "published": 1970,
     "outcomes": {
-      "evaluated": 1745,
-      "unsupported": 229
+      "evaluated": 1970,
+      "unsupported": 885
     },
     "configuration": {
       "counts": {
-        "estimated": 1715,
-        "verified": 30
+        "estimated": 1932,
+        "verified": 38
       },
       "profile": "coverage-experiment/1"
     },
     "totals": {
       "aic": {
-        "coverage_pct": 59.77,
-        "points": 1043,
+        "coverage_pct": 54.31,
+        "points": 1070,
         "status_counts": {
-          "failed": 702,
-          "success": 1043,
+          "failed": 703,
+          "success": 1070,
           "unknown": 0,
-          "unsupported": 0
+          "unsupported": 197
         },
         "tpot_mape_pct": 21.07,
-        "tpot_shape_error_pct": 10.33,
-        "ttft_mape_pct": 47.39,
-        "ttft_shape_error_pct": 37.24
+        "tpot_shape_error_pct": 10.37,
+        "ttft_mape_pct": 47.85,
+        "ttft_shape_error_pct": 37.66
       },
       "aisimulate": {
-        "coverage_pct": 75.36,
-        "points": 1315,
+        "coverage_pct": 77.87,
+        "points": 1534,
         "status_counts": {
-          "failed": 430,
-          "success": 1315,
+          "failed": 436,
+          "success": 1534,
           "unknown": 0,
           "unsupported": 0
         },
-        "tpot_mape_pct": 22.03,
-        "tpot_shape_error_pct": 11.0,
-        "ttft_mape_pct": 47.04,
-        "ttft_shape_error_pct": 34.95
+        "tpot_mape_pct": 20.19,
+        "tpot_shape_error_pct": 10.71,
+        "ttft_mape_pct": 47.02,
+        "ttft_shape_error_pct": 33.55
       },
       "by_configuration_quality": {
         "estimated": {
           "aic": {
-            "coverage_pct": 60.35,
-            "points": 1035,
+            "coverage_pct": 54.55,
+            "points": 1054,
             "status_counts": {
-              "failed": 680,
-              "success": 1035,
+              "failed": 681,
+              "success": 1054,
               "unknown": 0,
-              "unsupported": 0
+              "unsupported": 197
             },
-            "tpot_mape_pct": 20.37,
-            "tpot_shape_error_pct": 10.28,
-            "ttft_mape_pct": 47.28,
-            "ttft_shape_error_pct": 37.18
+            "tpot_mape_pct": 20.26,
+            "tpot_shape_error_pct": 10.36,
+            "ttft_mape_pct": 47.48,
+            "ttft_shape_error_pct": 37.36
           },
           "aisimulate": {
-            "points": 1291,
-            "tpot_mape_pct": 21.12,
-            "tpot_shape_error_pct": 11.01,
-            "ttft_mape_pct": 46.96,
-            "ttft_shape_error_pct": 35.07
+            "points": 1502,
+            "tpot_mape_pct": 19.4,
+            "tpot_shape_error_pct": 10.75,
+            "ttft_mape_pct": 47.08,
+            "ttft_shape_error_pct": 33.7
           },
-          "rows": 1715
+          "rows": 1932
         },
         "verified": {
           "aic": {
-            "coverage_pct": 26.67,
-            "points": 8,
+            "coverage_pct": 42.11,
+            "points": 16,
             "status_counts": {
               "failed": 22,
-              "success": 8,
+              "success": 16,
               "unknown": 0,
               "unsupported": 0
             },
-            "tpot_mape_pct": 111.01,
-            "tpot_shape_error_pct": 18.88,
-            "ttft_mape_pct": 61.33,
-            "ttft_shape_error_pct": 48.71
+            "tpot_mape_pct": 74.7,
+            "tpot_shape_error_pct": 10.83,
+            "ttft_mape_pct": 72.05,
+            "ttft_shape_error_pct": 62.49
           },
           "aisimulate": {
-            "points": 24,
-            "tpot_mape_pct": 70.67,
-            "tpot_shape_error_pct": 10.77,
-            "ttft_mape_pct": 51.64,
-            "ttft_shape_error_pct": 27.04
+            "points": 32,
+            "tpot_mape_pct": 57.6,
+            "tpot_shape_error_pct": 8.46,
+            "ttft_mape_pct": 43.97,
+            "ttft_shape_error_pct": 25.53
           },
-          "rows": 30
+          "rows": 38
         }
       },
       "frameworks": [
@@ -245,7 +245,7 @@
         "fp8",
         "int4"
       ],
-      "rows": 1745,
+      "rows": 1970,
       "workloads": [
         "1024:1024",
         "1024:8192",
@@ -254,133 +254,156 @@
     }
   },
   "input_comparison": {
-    "db_selected": 2281,
-    "hf_selected": 1974,
-    "shared": 1957,
-    "db_only": 324,
-    "hf_only": 17,
-    "changed_fields_on_shared": {
-      "isl": 0,
-      "osl": 0,
-      "conc": 0,
-      "metrics": 0,
-      "image": 0,
-      "date": 0
+    "schema": "hf-migration-input-audit/1",
+    "hf_revision": "8ec77d043d236ae92aa0cee6a9896f8195ea7718",
+    "db_release": "db-dump/2026-09-28",
+    "table_sha256": {
+      "db": "9125257cb98e195918fee2ee451d9ee4057fed5fab40e0da43cfc054d4a2330a",
+      "hf": "1815c558eada923ef0bcec2ebee00e7a8d1cdad2ee0498df877cf174b03e1ecc"
     },
-    "producer_field_changes_on_shared": {
-      "github_run_id": 0,
-      "run_attempt": 0,
-      "head_sha": 0,
-      "head_branch": 0,
-      "run_started_at": 1957,
-      "recipe_fingerprint": 0,
-      "server_log_id": 1957
-    },
-    "db_only_absent_from_HF_cache": 324,
-    "db_only_present_but_filtered_in_HF": 0,
-    "producer_start_instant_changes": 1625,
-    "reviewed_archive_lookup_on_shared": {
+    "selection": {
       "db": {
-        "reviewed_archived_recipe_found": 69,
-        "identity_mismatch": 0
+        "input_rows": 85309,
+        "counts": {
+          "measurement_date_through": "2026-09-27",
+          "selected": 3320,
+          "excluded": {
+            "source_filter": 32084,
+            "stale": 1293,
+            "superseded_image": 978,
+            "superseded_row": 47634
+          }
+        },
+        "decoding": {
+          "none": 2281,
+          "mtp": 1039
+        }
       },
       "hf": {
-        "reviewed_archived_recipe_found": 0,
-        "identity_mismatch": 89
+        "input_rows": 7743,
+        "counts": {
+          "measurement_date_through": "2026-10-19",
+          "selected": 2855,
+          "excluded": {
+            "source_filter": 3306,
+            "stale": 1009,
+            "superseded_image": 572,
+            "superseded_row": 1
+          }
+        },
+        "decoding": {
+          "none": 1974,
+          "mtp": 881
+        }
       }
     },
-    "configuration_grouping": {
-      "db_configs_on_shared": 549,
-      "hf_configs_on_shared": 549,
-      "db_configs_split_in_HF": 0,
-      "hf_configs_merging_DB_configs": 0
+    "overlap": {
+      "shared": 2829,
+      "all_shared_nontransport_fields_equal": true,
+      "shared_decoding": {
+        "none": 1957,
+        "mtp": 872
+      },
+      "db_only": {
+        "mtp": 167,
+        "none": 324
+      },
+      "hf_only": {
+        "none": 17,
+        "mtp": 9
+      }
     },
-    "measurement_job_seconds": {
-      "db": 1147,
-      "hf": 200
+    "evidence_binding_audit": {
+      "matched_launcher_recipe": 35,
+      "matched_archived_parsed": 69,
+      "matched_archived_workload": 20
+    },
+    "complete_deployment_audit": {
+      "matching_resolved": 93,
+      "matching_unresolved": 31
     }
   },
+  "scope": "Shared STP points; MTP is new and has no published baseline in this comparison.",
   "comparison": {
     "matching": "model, workload, GPU, framework, precision, serving topology, concurrency, exact producer run",
-    "shared_keys": 1727,
-    "unambiguous_shared_points": 1726,
+    "shared_keys": 1755,
+    "unambiguous_shared_points": 1754,
     "ambiguous_shared_keys": 1,
-    "baseline_only_keys": 343,
-    "hf_only_keys": 17,
+    "baseline_only_keys": 315,
+    "hf_only_keys": 214,
     "measurement_changes": 0,
     "configuration_changes": 0,
     "quality_transitions": {
-      "estimated -> estimated": 1696,
-      "verified -> verified": 30
+      "estimated -> estimated": 1716,
+      "verified -> verified": 38
     },
     "aisimulate": {
       "status_transitions": {
-        "success -> success": 1296,
-        "failed -> failed": 430
+        "failed -> failed": 433,
+        "success -> success": 1321
       },
       "metrics": {
         "ttft_ms": {
-          "comparable": 1296,
-          "changed": 35,
-          "max_absolute_delta": 34558.76709504744,
-          "max_relative_delta_pct": 1221.9777850304883
+          "comparable": 1321,
+          "changed": 0,
+          "max_absolute_delta": 0.0,
+          "max_relative_delta_pct": 0.0
         },
         "tpot_ms": {
-          "comparable": 1296,
-          "changed": 35,
-          "max_absolute_delta": 71.45695389594927,
-          "max_relative_delta_pct": 188.89694542312765
+          "comparable": 1321,
+          "changed": 0,
+          "max_absolute_delta": 0.0,
+          "max_relative_delta_pct": 0.0
         },
         "e2e_ms": {
-          "comparable": 1296,
-          "changed": 35,
-          "max_absolute_delta": 66115.62401578379,
-          "max_relative_delta_pct": 80.57784240829868
+          "comparable": 1321,
+          "changed": 0,
+          "max_absolute_delta": 0.0,
+          "max_relative_delta_pct": 0.0
         },
         "output_per_gpu": {
-          "comparable": 1296,
-          "changed": 35,
-          "max_absolute_delta": 4984.422038970234,
-          "max_relative_delta_pct": 45.08904153230252
+          "comparable": 1321,
+          "changed": 0,
+          "max_absolute_delta": 0.0,
+          "max_relative_delta_pct": 0.0
         },
         "total_per_gpu": {
-          "comparable": 1296,
-          "changed": 35,
-          "max_absolute_delta": 9969.888748178093,
-          "max_relative_delta_pct": 45.089041532302524
+          "comparable": 1321,
+          "changed": 0,
+          "max_absolute_delta": 0.0,
+          "max_relative_delta_pct": 0.0
         }
       }
     },
     "aic": {
       "status_transitions": {
-        "success -> success": 1025,
-        "failed -> failed": 697,
-        "success -> failed": 4
+        "failed -> failed": 702,
+        "success -> success": 1052
       },
       "metrics": {
         "ttft_ms": {
-          "comparable": 1025,
-          "changed": 22,
-          "max_absolute_delta": 22.421999999999997,
-          "max_relative_delta_pct": 9.28554863503843
+          "comparable": 1052,
+          "changed": 0,
+          "max_absolute_delta": 0.0,
+          "max_relative_delta_pct": 0.0
         },
         "tpot_ms": {
-          "comparable": 1025,
-          "changed": 21,
-          "max_absolute_delta": 10.590000000000003,
-          "max_relative_delta_pct": 42.1845124282983
+          "comparable": 1052,
+          "changed": 0,
+          "max_absolute_delta": 0.0,
+          "max_relative_delta_pct": 0.0
         },
         "e2e_ms": {
-          "comparable": 1025,
-          "changed": 22,
-          "max_absolute_delta": 10855.991999999998,
-          "max_relative_delta_pct": 41.87805791829173
+          "comparable": 1052,
+          "changed": 0,
+          "max_absolute_delta": 0.0,
+          "max_relative_delta_pct": 0.0
         },
         "output_per_gpu": {
-          "comparable": 1025,
-          "changed": 19,
-          "max_absolute_delta": 464.2883333333334,
-          "max_relative_delta_pct": 29.664923195436998
+          "comparable": 1052,
+          "changed": 0,
+          "max_absolute_delta": 0.0,
+          "max_relative_delta_pct": 0.0
         },
         "total_per_gpu": {
           "comparable": 0,
@@ -391,23 +414,54 @@
       }
     }
   },
-  "parity": {
-    "achieved": false,
-    "reviewed_launcher_binding": {
-      "model": "nvidia/MiniMax-M2.5-NVFP4",
-      "hardware": "b300",
-      "framework": "dynamo-vllm",
-      "producer_run_id": "26857293503",
-      "db_matches": 35,
-      "hf_matches": 0,
-      "cause": "launcher_recipe_sources.json binds reviewed points to numeric database configuration IDs; HF content IDs miss the match and choose the generic recipe path"
+  "decoding_coverage": {
+    "baseline": {
+      "none": {
+        "failed": 487,
+        "success": 1584
+      }
     },
-    "reviewed_runtime_binding": "Legacy reviewed runtime records also bind database row identities; 89 HF rows fail the local archive identity check. Complete CI still qualifies by explicitly excluding unresolved sources."
+    "hf": {
+      "mtp": {
+        "success": 194,
+        "failed": 3
+      },
+      "none": {
+        "failed": 433,
+        "success": 1340
+      }
+    }
   },
-  "browser_checks": {
-    "desktop": "passed",
-    "mobile": "passed",
-    "details_charts_and_point_dialog": "passed",
-    "javascript_errors": 0
+  "qualification": {
+    "baseline": {
+      "summary_sha256": "0b4abf753ba7f41273aebda68d02028200cfe8c7360187ff6ff106ebc6f52e2d",
+      "run_id": "39237616407",
+      "commit_sha": "c9e7363bf5983b980fe6622f7b064ee7adff5f5d",
+      "wheel_sha256": "379472f58a50f78607140e8a8333d3e65ab2e51555c9d2c5df5e5070f5f3b74a",
+      "exclusion_reasons": {
+        "source_unresolved": 210
+      },
+      "measurement_filter_counts": {
+        "source_filter": 35895,
+        "stale": 1012,
+        "superseded_image": 697,
+        "superseded_row": 45424
+      }
+    },
+    "hf": {
+      "summary_sha256": "3edfa0c0ee23935cf097ee75e55766a0f64c72102c3a789b51a942e4f13456ee",
+      "run_id": "39335708203",
+      "commit_sha": "30b264ae91bf5a4fdad1ab75d3a85114f2e09094",
+      "wheel_sha256": "c8e9af68f157d378cbde8aaa47ffcffaf5d85d3ac6312d2e9cfe6d4db3663e50",
+      "exclusion_reasons": {
+        "source_unresolved": 885
+      },
+      "measurement_filter_counts": {
+        "source_filter": 3306,
+        "stale": 1009,
+        "superseded_image": 572,
+        "superseded_row": 1
+      }
+    }
   }
 }

@@ -1,21 +1,26 @@
 <!doctype html>
 <html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PR #512: E2E HF input preview</title>
-<style>body{font:16px/1.6 system-ui,sans-serif;max-width:64rem;margin:3rem auto;padding:0 1.2rem;color:#243247}table{border-collapse:collapse;width:100%}th,td{padding:.7rem;text-align:left;border-bottom:1px solid #dde3eb}a{color:#4051c7}.notice{border-left:4px solid #c57b12;background:#fff8eb;padding:1rem}code{overflow-wrap:anywhere}</style>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:64rem;margin:3rem auto;padding:0 1.2rem;color:#243247}table{border-collapse:collapse;width:100%}th,td{padding:.7rem;text-align:left;border-bottom:1px solid #dde3eb}a{color:#4051c7}.notice{border-left:4px solid #28734b;background:#edf8f0;padding:1rem}code{overflow-wrap:anywhere}</style>
 <h1>PR #512: E2E HF input preview</h1>
-<p><a href="e2e-accuracy/">Open HF-backed E2E Gym</a> · <a href="db-baseline/">Open DB baseline</a> · <a href="comparison.json">Comparison data</a></p>
-<p class="notice"><strong>Pipeline passed; numerical parity is not achieved.</strong> This is a review snapshot, not the production dashboard.</p>
-<p><a href="https://github.com/ai-dynamo/aisimulate/actions/runs/39306484930">HF preview run</a> evaluated <code>6215ed1a8859608c760d6866b9d237c7cf34aa03</code>.
-<a href="https://github.com/ai-dynamo/aisimulate/actions/runs/39237616407">DB baseline run</a> evaluated <code>c9e7363bf5983b980fe6622f7b064ee7adff5f5d</code>.</p>
-<table><thead><tr><th>Measure</th><th>DB baseline</th><th>HF preview</th></tr></thead><tbody><tr><th>Selected inputs</th><td>2281</td><td>1974</td></tr><tr><th>Published rows</th><td>2071</td><td>1745</td></tr><tr><th>Successful AISim replays</th><td>1584</td><td>1315</td></tr><tr><th>AISim TTFT MAPE (%)</th><td>45.27</td><td>47.04</td></tr><tr><th>AISim TPOT MAPE (%)</th><td>22.39</td><td>22.03</td></tr></tbody></table>
-<p>The fixes are pushed at <code>30b264ae91bf5a4fdad1ab75d3a85114f2e09094</code>. The <a href="https://github.com/ai-dynamo/aisimulate/actions/runs/39335708203">fresh combined campaign</a> is pending. <a href="input-comparison.json">Current input/evidence audit</a>: all 124 affected STP deployment outcomes match. The dashboard and numerical comparison below still describe the earlier run.</p>
-<h2>What changed in the earlier run</h2>
-<ul><li>The HF current-view cohort has 324 fewer historical inputs and 17 new inputs. All 1,957 shared benchmark IDs retain identical measured metrics, workloads and images. Their 549 configurations retain one-to-one grouping.</li>
-<li>Among 1,726 unambiguously matched published points, measurements and reported backend configurations agree. One ambiguous key is excluded from numerical matching.</li>
-<li>Of 1,296 matched successful AISim replays, 1,261 match and 35 differ (tolerance: 1e-9 relative/absolute). All 35 differences are MiniMax-M2.5 NVFP4 / B300 / Dynamo-vLLM. The reviewed launcher mapping binds DB configuration IDs; HF IDs miss it and choose a different recipe path.</li>
-<li>Legacy runtime-evidence bindings also depend on DB identities. The HF campaign explicitly excludes 229 unresolved sources, compared with 210 in the different DB cohort.</li>
-<li>AIC is a separate analytical baseline: 22 matched successful TTFT predictions differ, and four previously successful matched points fail. It is not used as a substitute for engine replay.</li>
-<li>Input preparation took 3m20s with HF and 19m07s with the DB dump in these runs. Both dashboards passed Chromium rendering checks; the HF view also passed chart, point-dialog and mobile checks.</li></ul>
-<p>Aggregate MAPE values above describe different cohorts; they do not establish a predictor improvement or regression. Reviewed evidence bindings need migration and a fresh comparison before claiming parity.</p>
+<p><a href="e2e-accuracy/">Open HF E2E Gym</a> · <a href="db-baseline/">DB baseline</a> · <a href="comparison.json">Comparison data</a> · <a href="input-comparison.json">Input audit</a></p>
+<p class="notice"><strong>Fresh campaign and Full CI passed. Shared STP predictions match exactly.</strong> This is a review snapshot, not the production dashboard.</p>
+<p><a href="https://github.com/ai-dynamo/aisimulate/actions/runs/39335708203">HF preview run</a>: <code>30b264ae91bf5a4fdad1ab75d3a85114f2e09094</code>.<br>
+<a href="https://github.com/ai-dynamo/aisimulate/actions/runs/39237616407">DB baseline</a>: <code>c9e7363bf5983b980fe6622f7b064ee7adff5f5d</code>.</p>
+<h2>Numerical comparison</h2>
+<ul><li>1,321 matched successful AISim replays have zero differences in TTFT, TPOT, E2E latency and both throughput metrics. The 35 MiniMax discrepancies are resolved.</li>
+<li>1,052 matched successful AIC predictions agree exactly across available metrics.</li>
+<li>1,754 shared published points retain identical measurements, configurations and prediction statuses. One ambiguous key is excluded from comparison.</li>
+<li>Predictor source is unchanged between the two commits. The separately built wheels have different hashes.</li></ul>
+<h2>Coverage</h2>
+<table><thead><tr><th>Measure</th><th>DB STP</th><th>HF STP</th><th>HF MTP</th></tr></thead><tbody>
+<tr><th>Selected</th><td>2281</td><td>1974</td><td>881</td></tr>
+<tr><th>Published</th><td>2071</td><td>1773</td><td>197</td></tr>
+<tr><th>Successful replays</th><td>1584</td><td>1340</td><td>194</td></tr>
+<tr><th>Failed replays</th><td>487</td><td>433</td><td>3</td></tr>
+<tr><th>Unresolved source</th><td>210</td><td>201</td><td>684</td></tr>
+</tbody></table>
+<p>MTP has no published baseline in this comparison. Missing or shared observed acceptance stays unresolved. Different cohorts mean aggregate MAPE changes do not establish predictor improvements or regressions.</p>
+<p>The dashboard supports All / STP / MTP filtering, with MTP settings and evidence labels in point details.</p>
 <p>HF revision: <code>8ec77d043d236ae92aa0cee6a9896f8195ea7718</code>. DB release: <code>db-dump/2026-09-28</code>. Source: SemiAnalysis InferenceX.</p>
-<p><a href="README.md">Source and artifact provenance</a> · <a href="../">All review previews</a></p></html>
+<p><a href="README.md">Provenance and reproduction</a> · <a href="../">All review previews</a></p></html>
