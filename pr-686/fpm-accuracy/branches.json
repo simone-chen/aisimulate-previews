@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "default_branch": "main",
+  "branches": [
+    {
+      "branch": "main",
+      "status": "unavailable",
+      "summary_path": null
+    }
+  ]
+}

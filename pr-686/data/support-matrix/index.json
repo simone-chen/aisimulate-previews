@@ -1,0 +1,20 @@
+{
+  "files": [
+    "b200_sxm.csv",
+    "gb200.csv",
+    "b300_sxm.csv",
+    "gb300.csv",
+    "rtx_pro_6000_server.csv",
+    "h200_sxm.csv",
+    "h100_sxm.csv",
+    "l40s.csv",
+    "a100_sxm.csv",
+    "b60.csv"
+  ],
+  "snapshot": {
+    "kind": "historical",
+    "qualification": "not_recorded",
+    "data_commit": "3155c30a6cb69a5af5812f6fb8f62a903d70299f",
+    "data_updated_at": "2026-10-27T19:19:26Z"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "branches": [
+    {
+      "branch": "simonec/agentx-opdata-preview",
+      "status": "unavailable",
+      "summary_path": null,
+      "published_from_commit": null
+    },
+    {
+      "branch": "main",
+      "evaluated_revision": {
+        "branch": "main",
+        "commit_sha": "e46be717175acf06bdbbdeadb7aaf9bb2afdae8d"
+      },
+      "published_from_commit": null,
+      "status": "evaluated",
+      "summary_path": "branches/0d6e4079e36703eb/summary.json"
+    }
+  ],
+  "default_branch": "simonec/agentx-opdata-preview",
+  "schema_version": 1,
+  "preview": true
+}

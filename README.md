@@ -1,5 +1,14 @@
 # AISimulate review previews
 
+## PR #686: AgentX comparison dashboard
+
+- [AgentX preview](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview): one expanded table, integrated silicon comparisons, paired request timelines, and system/manual themes.
+- All 42 fresh replays completed: six GLM points and 36 Qwen runs, using pinned op-data changes from #664/#665/#666 on a separate integration branch.
+- Publication checks validated checksums, complete accounting, consistent provenance, and the public field allowlist before upload. Private inputs, prompts, token arrays, raw stream events, local paths, and logs are excluded.
+- [Provenance and validation](pr-686/README.md). This review snapshot is separate from production rollout, which awaits reviewed dataset promotion and the op-data dependencies landing.
+
+## PR #417: FPM Gym
+
 - [PR #417](https://github.com/ai-dynamo/aisimulate/pull/417): [FPM Gym preview](https://simone-chen.github.io/aisimulate-previews/pr-417/fpm-accuracy/?branch=main).
 - Dashboard source: `ai-dynamo/aisimulate` at `0c5bb9ecfc46ca96feb9a88da70fc493c75dc164` (Apache-2.0). Evaluation remains pinned to `714e0188d1921ad90485670efa674cebc011011f`.
 - [Qualified evaluation](https://github.com/ai-dynamo/aisimulate/actions/runs/38318468113), attempt 1, October 12, 2026 UTC. Predictor wheel: `2f0f4cd8606d580567b253d02f3d699fe36db865`. [HF PR #16 revision](https://huggingface.co/datasets/nvidia/aisimulate-fpm-dataset/tree/562d958065e7695e6811561d3c78c1f648c70d3b): `562d958065e7695e6811561d3c78c1f648c70d3b`.
