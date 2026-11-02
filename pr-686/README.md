@@ -1,7 +1,7 @@
 # AgentX comparison dashboard preview
 
 - [Open AgentX](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview).
-- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `bc659c339c64f3b0c90e621e657735ebd70180e2`.
+- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `6165f0f4a404238fd6224230e895e6306a698706`.
 - Evaluated wheel: integration commit `1c753e4668310705b6451ba1ebf3061b3d5b30de`, SHA256 `dff8896a4c374c4e21597076cbf356e8611a0f021ba57ba85313e4ec6fa0530c`.
 - Op-data dependencies remain outside the dashboard PR: #664 at `36a69a683c60081e61d6379f868b1c7257e1a41e`, #665 at `64ac539813677d15e58c8ba051a6b5fc95c5334b`, and #666 at `d8054a56115238776438f2c4ba59fe295a2db430`.
 - Selected prediction databases: B300 SGLang 0.5.21 and vLLM 0.31.0. Measured framework versions are recorded separately in the dashboard.
@@ -32,3 +32,5 @@
 - Comparison timelines fit the full phase across the panel. Compact 22-pixel rows put the conversation hash and request ID on one line; paired source intervals remain separately selectable. GLM and Qwen request counts, inspection, keyboard access, and mobile layout passed browser checks.
 
 - Plots and expanded charts omit the “Comparison coverage and exclusions” accordion while retaining MAPE badges and scored-request counts. The underlying numerical evidence is unchanged.
+
+- The footprint comparison has two stacked panels: Silicon/AISim above, signed AISim-minus-Silicon difference below. Long runs default to 60-second averages; short runs use Raw. The toggle is available in the card and expanded chart, with shared zoom. Missing observations remain gaps, zeros are included, and original one-second Curve MAPE is unchanged. Numeric bucket, gap, partial-bin, mobile, theme, and offline replay checks passed.
