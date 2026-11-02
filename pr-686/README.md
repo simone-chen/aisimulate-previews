@@ -1,7 +1,7 @@
 # AgentX comparison dashboard preview
 
 - [Open AgentX](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview).
-- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `a91b8bb43eb05fb2d63771c4272f46712dc53947`.
+- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `bc659c339c64f3b0c90e621e657735ebd70180e2`.
 - Evaluated wheel: integration commit `1c753e4668310705b6451ba1ebf3061b3d5b30de`, SHA256 `dff8896a4c374c4e21597076cbf356e8611a0f021ba57ba85313e4ec6fa0530c`.
 - Op-data dependencies remain outside the dashboard PR: #664 at `36a69a683c60081e61d6379f868b1c7257e1a41e`, #665 at `64ac539813677d15e58c8ba051a6b5fc95c5334b`, and #666 at `d8054a56115238776438f2c4ba59fe295a2db430`.
 - Selected prediction databases: B300 SGLang 0.5.21 and vLLM 0.31.0. Measured framework versions are recorded separately in the dashboard.
@@ -21,7 +21,7 @@
 
 - Official and self-collected source labels use compact blue pill badges sized to their text, matching the NEW badge style. Both themes were checked.
 
-- Comparison charts and request timelines use blue for silicon and yellow for AISim. Multi-metric curves retain distinct line patterns; failed requests retain a red outline. Browser checks covered 36 comparison series, expanded charts, and timeline legends in both themes.
+- Comparison charts and request timelines use solid blue for silicon and solid yellow for AISim. Only Cumulative prompt token sources uses dotted lines, for cache misses; cache hits use solid lines. Failed requests retain a red outline. Browser checks covered GLM and Qwen curves, expanded charts, and timeline inspection in both themes.
 
 - The separate selected-run accuracy table is removed. Taller concurrency-summary cells show blue Silicon and yellow AISim values above the TPOT, TTFT, and output-throughput errors, with metric-specific units. Values average the same scored runs as their point errors; request MAPE retains its pooled-request count. Qwen selectors change the charts while the summary continues to cover all 12 runs. Averaging, missing values, selectors, mobile layout, and both themes passed checks.
 
