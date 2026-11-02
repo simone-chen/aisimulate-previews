@@ -1,5 +1,7 @@
 # AISimulate review previews
 
+- Open previews through their hosted HTTPS URLs. The index uses absolute links so opening a local checkout's `index.html` also navigates to GitHub Pages; dashboard data cannot load directly from local files.
+
 ## PR #686: AgentX comparison dashboard
 
 - [AgentX preview](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview): one expanded table, integrated silicon comparisons, paired request timelines, and system/manual themes.
