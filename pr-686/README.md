@@ -55,3 +55,10 @@
 - Preview refresh at source `214f1aae83b36199dba3152558c3b6ee5397f8b7`: update asset cache keys and qualification provenance. Existing 42 numerical results, feature sidecar, dataset revision and evaluated-wheel provenance remain byte-identical. No additional GPU collection or incomplete campaign publication.
 
 - An information icon before Point TPOT error briefly contrasts the aggregate result across conversation requests with averaging individual request errors. It explains that tool-call waits are excluded from TTFT/TPOT calculations, and point error can be smaller because over- and under-predictions cancel when averaged. Metrics and provenance retain the calculation details. Desktop hover, keyboard focus/Escape, touch, both themes, and mobile bounds passed browser checks. Numerical results are unchanged.
+
+## Qwen collection attempt — November 3, 2026
+
+- Qualified one-hour profiles at 1 lane (484 measured credits, one cancellation) and 4 lanes (667 measured requests, no failures); both retain all 36 feature records.
+- The 8-lane server remained in checkpoint loading at the 30-minute startup deadline, with 93/94 shards loaded. No 8-lane measurement started; 10/13/14 lanes were not attempted. Collection stopped under the agreed qualification rule.
+- GPU allocations consumed 12798/28800 seconds (3.56 node-hours). Partial silicon and failure evidence remain private and explicitly unscored.
+- No replacement campaign was published. Existing 42-run numerical results and the feature sidecar remain unchanged; the six-profile/twelve-replay publication gate still applies.
