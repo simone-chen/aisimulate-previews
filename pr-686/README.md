@@ -1,7 +1,7 @@
 # AgentX comparison dashboard preview
 
 - [Open AgentX](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview).
-- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `092616254f795b649cfd7dd88dd35a5679c670fc` (includes the qualification/accounting changes from `b77349e844e80021d775a27bb973b8ffa44a11b9`).
+- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `f6a65f00cbe6682a2805a3532ac1ca3383cd356d` (includes the qualification/accounting changes from `b77349e844e80021d775a27bb973b8ffa44a11b9`).
 - Evaluated wheel: integration commit `1c753e4668310705b6451ba1ebf3061b3d5b30de`, SHA256 `dff8896a4c374c4e21597076cbf356e8611a0f021ba57ba85313e4ec6fa0530c`.
 - Op-data dependencies remain outside the dashboard PR: #664 at `36a69a683c60081e61d6379f868b1c7257e1a41e`, #665 at `64ac539813677d15e58c8ba051a6b5fc95c5334b`, and #666 at `d8054a56115238776438f2c4ba59fe295a2db430`.
 - Selected prediction databases: B300 SGLang 0.5.21 and vLLM 0.31.0. Measured framework versions are recorded separately in the dashboard.
@@ -47,3 +47,5 @@
 - All 42 existing numerical results remain unchanged and qualified. All 42 saved HF feature inventories are included through the checksum-pinned sidecar; its dataset revision remains separate from the evaluated measurement revision.
 - The new 14-lane Qwen Weka pilot completed its 600-second silicon admission window, but native replay ended with `server_unsettled`. Collection stopped at 0.78 of eight node-hours; no full profile or replacement 12-replay campaign qualified.
 - The failed pilot and its 36-feature record are retained privately for review. They are not included in public accuracy payloads. The six-profile Weka replacement remains unavailable pending successful qualification.
+
+- Timeline windows show only request pairs with a silicon or AISim interval overlapping the visible range. Scrolling and paging remove other rows; boundary-crossing requests stay visible with clipped intervals. Full-phase counts and scores are unchanged. Browser checks cover exact boundaries, separated counterparts, failed/unmatched and untimed requests, empty windows, scrolling, mobile resizing, and all six windows of the real GLM 1/14-lane profiles.
