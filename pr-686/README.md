@@ -1,7 +1,7 @@
 # AgentX comparison dashboard preview
 
 - [Open AgentX](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview).
-- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI source commit `1003a728f6bce5027fd96df520e70ebeae8d1404`; producer source commit `214f1aae83b36199dba3152558c3b6ee5397f8b7`.
+- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI source commit `2c71cea960d90e7f6ebea3a5bcab323ed6860824`; producer source commit `214f1aae83b36199dba3152558c3b6ee5397f8b7`.
 - Evaluated wheel: integration commit `1c753e4668310705b6451ba1ebf3061b3d5b30de`, SHA256 `dff8896a4c374c4e21597076cbf356e8611a0f021ba57ba85313e4ec6fa0530c`.
 - Op-data dependencies remain outside the dashboard PR: #664 at `36a69a683c60081e61d6379f868b1c7257e1a41e`, #665 at `64ac539813677d15e58c8ba051a6b5fc95c5334b`, and #666 at `d8054a56115238776438f2c4ba59fe295a2db430`.
 - Selected prediction databases: B300 SGLang 0.5.21 and vLLM 0.31.0. Measured framework versions are recorded separately in the dashboard.
@@ -76,3 +76,5 @@
 - Each of the eight feature rows now has separate Silicon and AISim status cells. Feature names have no icons; On has a green dot, Off a red dot, and Unknown a question mark. The explanatory footer is removed; provenance remains visible and cell tooltips explain missing evidence.
 - Silicon states come only from recorded silicon metadata. AISim states come from the selected run's configuration projection: prefix caching is On in both models, speculation is On with draft length 3 for GLM and Off for Qwen. The other six AISim settings remain Unknown in historical artifacts. An explicit per-feature unsupported value is displayed separately from Off; whole-run failures do not identify unsupported features.
 - Validation: 66 UI tests and AgentX browser checks pass, including source separation, explicit unsupported states, missing/invalid/conflicting settings, and unclamped draft length. Real GLM/Qwen pages passed light/dark themes, equal-height layout, selected-run changes, and 320/390-pixel mobile bounds. All 46 existing JSON artifacts remain unchanged.
+
+- Speculative decoding now shows matching Method and Draft length badges under both Silicon and AISim when On. AISim method uses an explicit recorded setting; historical results lack that field and show Unknown. Draft length remains 3 for GLM; Qwen stays Off without badges. All 67 UI tests and browser checks passed, including both themes and mobile bounds. Numerical payloads and feature evidence are unchanged.
