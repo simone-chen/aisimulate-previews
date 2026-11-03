@@ -1,7 +1,7 @@
 # AgentX portable-schema review preview
 
-- [Open the refreshed dashboard](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview&v=b0275f0c).
-- Dashboard and CI: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), source `1d94a36f5e3004e53bca4046e056f2069369f04e`.
+- [Open the refreshed dashboard](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview&v=64c2bf74d).
+- Dashboard and CI: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), source `64c2bf74df01c2efeb255ff1afc57d9ad493050c`.
 - HF candidate revision: `b0275f0cbd1d4ab71d394e98d2da359423c57167`. The dataset is private; no public dataset migration or promotion occurred.
 - Display only the newer Qwen Weka measurements; remove the older finite Qwen campaign from this preview.
 - Fresh CPU replay of six active GLM points and the retained Qwen Weka 1-/4-lane profiles. All eight completed and passed complete selected-cohort accounting and strict public-field validation. The five accuracy metrics were independently reproduced from observations and native replay records.
@@ -22,3 +22,5 @@
 - All eight prior numerical results, request errors, coverage and pairs reproduce exactly. Local checks: 677 tests and 138 subtests, 81 UI/workflow checks, exact Python static checks and the AgentX browser suite.
 
 - Latest candidate refresh: resolve additional silicon feature states from retained evidence and keep gap reports private. Rerun all eight points against this revision; all numerical results, request errors, coverage and pairs remain identical.
+
+- Rename the comparison panel to Feature Parity. Unrecorded means missing evidence; N/A means inapplicable to the execution. Cell notes are generated from saved evidence by dashboard templates; observed use remains separate from configured settings.
