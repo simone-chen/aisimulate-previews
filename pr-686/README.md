@@ -1,7 +1,7 @@
 # AgentX comparison dashboard preview
 
 - [Open AgentX](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview).
-- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI source commit `a01b4b45d4a58f65332e7fb7646cc5eab2ce1cbe`; producer source commit `214f1aae83b36199dba3152558c3b6ee5397f8b7`.
+- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI source commit `20dc45b34bb79f2cdc02185da9f982a2d870a6b4`; producer source commit `214f1aae83b36199dba3152558c3b6ee5397f8b7`.
 - Evaluated wheel: integration commit `1c753e4668310705b6451ba1ebf3061b3d5b30de`, SHA256 `dff8896a4c374c4e21597076cbf356e8611a0f021ba57ba85313e4ec6fa0530c`.
 - Op-data dependencies remain outside the dashboard PR: #664 at `36a69a683c60081e61d6379f868b1c7257e1a41e`, #665 at `64ac539813677d15e58c8ba051a6b5fc95c5334b`, and #666 at `d8054a56115238776438f2c4ba59fe295a2db430`.
 - Selected prediction databases: B300 SGLang 0.5.21 and vLLM 0.31.0. Measured framework versions are recorded separately in the dashboard.
@@ -54,4 +54,4 @@
 
 - Preview refresh at source `214f1aae83b36199dba3152558c3b6ee5397f8b7`: update asset cache keys and qualification provenance. Existing 42 numerical results, feature sidecar, dataset revision and evaluated-wheel provenance remain byte-identical. No additional GPU collection or incomplete campaign publication.
 
-- An information icon before Point TPOT error briefly contrasts the aggregate result across conversation requests with averaging individual request errors. It states the current calculation boundary: tool-call waits contribute to workload duration and throughput, while TTFT/TPOT use request timings. Metrics and provenance retain the calculation details. Desktop hover, keyboard focus/Escape, touch, both themes, and mobile bounds passed browser checks. Numerical results are unchanged.
+- An information icon before Point TPOT error briefly contrasts the aggregate result across conversation requests with averaging individual request errors. It explains that tool-call waits are excluded from TTFT/TPOT calculations, and point error can be smaller because over- and under-predictions cancel when averaged. Metrics and provenance retain the calculation details. Desktop hover, keyboard focus/Escape, touch, both themes, and mobile bounds passed browser checks. Numerical results are unchanged.
