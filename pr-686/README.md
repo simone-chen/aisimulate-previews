@@ -1,7 +1,7 @@
 # AgentX comparison dashboard preview
 
 - [Open AgentX](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview).
-- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `ff1224fd119c1d93d49768326e083798f4846efb`.
+- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `53d72ba795cc5ef5a224c66d09a9b8138fad488a`.
 - Evaluated wheel: integration commit `1c753e4668310705b6451ba1ebf3061b3d5b30de`, SHA256 `dff8896a4c374c4e21597076cbf356e8611a0f021ba57ba85313e4ec6fa0530c`.
 - Op-data dependencies remain outside the dashboard PR: #664 at `36a69a683c60081e61d6379f868b1c7257e1a41e`, #665 at `64ac539813677d15e58c8ba051a6b5fc95c5334b`, and #666 at `d8054a56115238776438f2c4ba59fe295a2db430`.
 - Selected prediction databases: B300 SGLang 0.5.21 and vLLM 0.31.0. Measured framework versions are recorded separately in the dashboard.
@@ -37,4 +37,4 @@
 
 - AgentX omits the Speculative acceptance length and Prefix cache hit rate per interval subplots. Browser checks covered GLM and Qwen profile/preparation views and confirmed both charts remain in ordinary replay exports.
 
-- The Benchmark features checklist sits to the right of Concurrency summary and below it on mobile. It follows the selected run and uses saved silicon feature metadata; Enabled, Off, N/A, and Not recorded remain distinct. Additional recorded features expand with the keyboard-accessible More features control. Current historical runs do not contain that inventory and show Not recorded. Browser fixtures verified populated states, counts, themes, selectors, and reloads; no feature settings were inferred or added to historical data.
+- The Benchmark features checklist sits to the left of Concurrency summary in one bordered, equal-height row; on mobile the checklist comes first. It follows the selected run and uses saved silicon feature metadata; Enabled, Off, N/A, and Not recorded remain distinct. Additional recorded features expand with the keyboard-accessible More features control. Current historical runs do not contain that inventory and show Not recorded. Browser fixtures verified populated states, counts, themes, selectors, and reloads; no feature settings were inferred or added to historical data.
