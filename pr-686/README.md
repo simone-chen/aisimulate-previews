@@ -53,3 +53,5 @@
 - Overview request columns show TPOT MAPE before TTFT MAPE, with matching values and denominators.
 
 - Preview refresh at source `214f1aae83b36199dba3152558c3b6ee5397f8b7`: update asset cache keys and qualification provenance. Existing 42 numerical results, feature sidecar, dataset revision and evaluated-wheel provenance remain byte-identical. No additional GPU collection or incomplete campaign publication.
+
+- An information icon before Point TPOT error defines run-level TTFT/TPOT, the absolute percentage error formula, equal-run averaging, and the distinction from request MAPE. The explanation also appears in Metrics and provenance. Desktop hover, keyboard focus/Escape, touch, both themes, and mobile bounds passed browser checks. Numerical results are unchanged.
