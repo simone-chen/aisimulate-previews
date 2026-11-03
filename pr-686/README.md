@@ -1,7 +1,7 @@
 # AgentX comparison dashboard preview
 
 - [Open AgentX](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview).
-- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `afb5b0773bbe6ead03642f8f8b90d2d0834c3e76`.
+- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `092616254f795b649cfd7dd88dd35a5679c670fc`.
 - Evaluated wheel: integration commit `1c753e4668310705b6451ba1ebf3061b3d5b30de`, SHA256 `dff8896a4c374c4e21597076cbf356e8611a0f021ba57ba85313e4ec6fa0530c`.
 - Op-data dependencies remain outside the dashboard PR: #664 at `36a69a683c60081e61d6379f868b1c7257e1a41e`, #665 at `64ac539813677d15e58c8ba051a6b5fc95c5334b`, and #666 at `d8054a56115238776438f2c4ba59fe295a2db430`.
 - Selected prediction databases: B300 SGLang 0.5.21 and vLLM 0.31.0. Measured framework versions are recorded separately in the dashboard.
@@ -29,7 +29,7 @@
 
 - Qwen runs contain eight measured requests per lane, whereas GLM uses one-hour AgentX profiles with recorded variable prompts and warmup state. Qwen has no continuous silicon scheduler/cache measurements. The footprint reference now renders, and charts explicitly label unavailable silicon references or AISim-only histograms.
 
-- Comparison timelines fit the full phase across the panel. Compact 22-pixel rows put the conversation hash and request ID on one line; paired source intervals remain separately selectable. GLM and Qwen request counts, inspection, keyboard access, and mobile layout passed browser checks.
+- Comparison timelines show ten minutes per screen with horizontal scrolling and previous/next buttons. The six GLM profiles each span six windows; the final window includes up to one minute of terminal drain and labels its actual end. Request labels stay pinned, compact 22-pixel rows retain both intervals, and resizing preserves the selected time range. All six GLM profiles, keyboard paging, scrolling, mobile resizing, request inspection, and ordinary offline reports passed browser checks. Numerical results remain unchanged.
 
 - Plots and expanded charts omit the “Comparison coverage and exclusions” accordion while retaining MAPE badges and scored-request counts. The underlying numerical evidence is unchanged.
 
