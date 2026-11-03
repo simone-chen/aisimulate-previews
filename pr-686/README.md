@@ -49,3 +49,5 @@
 - The failed pilot and its 36-feature record are retained privately for review. They are not included in public accuracy payloads. The six-profile Weka replacement remains unavailable pending successful qualification.
 
 - Timeline windows show only request pairs with a silicon or AISim interval overlapping the visible range. Scrolling and paging remove other rows; boundary-crossing requests stay visible with clipped intervals. Full-phase counts and scores are unchanged. Browser checks cover exact boundaries, separated counterparts, failed/unmatched and untimed requests, empty windows, scrolling, mobile resizing, and all six windows of the real GLM 1/14-lane profiles.
+
+- Overview request columns show TPOT MAPE before TTFT MAPE, with matching values and denominators.
