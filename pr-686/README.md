@@ -1,7 +1,7 @@
 # AgentX comparison dashboard preview
 
 - [Open AgentX](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview).
-- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI source commit `20dc45b34bb79f2cdc02185da9f982a2d870a6b4`; producer source commit `214f1aae83b36199dba3152558c3b6ee5397f8b7`.
+- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI source commit `f2611bb84c83d2c44b9aaf535ea1dcfd5e10add9`; producer source commit `214f1aae83b36199dba3152558c3b6ee5397f8b7`.
 - Evaluated wheel: integration commit `1c753e4668310705b6451ba1ebf3061b3d5b30de`, SHA256 `dff8896a4c374c4e21597076cbf356e8611a0f021ba57ba85313e4ec6fa0530c`.
 - Op-data dependencies remain outside the dashboard PR: #664 at `36a69a683c60081e61d6379f868b1c7257e1a41e`, #665 at `64ac539813677d15e58c8ba051a6b5fc95c5334b`, and #666 at `d8054a56115238776438f2c4ba59fe295a2db430`.
 - Selected prediction databases: B300 SGLang 0.5.21 and vLLM 0.31.0. Measured framework versions are recorded separately in the dashboard.
@@ -37,7 +37,7 @@
 
 - AgentX omits the Speculative acceptance length and Prefix cache hit rate per interval subplots. Browser checks covered GLM and Qwen profile/preparation views and confirmed both charts remain in ordinary replay exports.
 
-- The Benchmark features checklist sits to the left of Concurrency summary in one bordered, equal-height row; on mobile the checklist comes first. It follows the selected run and uses saved silicon feature metadata; Enabled, Off, N/A, and Not recorded remain distinct. Additional recorded features expand with the keyboard-accessible More features control. All 42 historical runs now have recorded feature inventories; settings without evidence still show Not recorded. Browser checks verified the real GLM/Qwen records, counts, themes, selectors, and reloads.
+- The Benchmark features checklist sits to the left of Concurrency summary in one bordered, equal-height row; on mobile the checklist comes first. It now shows exactly eight fields: prefix caching, sub-block prefix reuse, host/storage offload, hybrid KV/state cache, speculative decoding, Dynamo - KVCR, and Dynamo - KV-aware routing. On, Off, N/A, and Unknown remain distinct; workload/topology details stay outside this checklist. The keyboard-accessible Combination support control lists the three relevant combinations separately. All 42 historical runs retain their saved feature inventories.
 
 - Historical feature evidence is pinned separately at HF revision `d289b4242d1e28a181931eedb4464f07243ab0fa`, while measurement/prediction provenance remains at dataset revision `da115d648f0be20a1c4e0408d552a4a1e8bebf9d`. The versioned feature sidecar and its advertised checksum passed the trusted publisher; all 44 existing numerical/qualification JSON files remain byte-identical. The private dataset review candidate is updated; promotion to main remains pending.
 
@@ -62,3 +62,9 @@
 - The 8-lane server remained in checkpoint loading at the 30-minute startup deadline, with 93/94 shards loaded. No 8-lane measurement started; 10/13/14 lanes were not attempted. Collection stopped under the agreed qualification rule.
 - GPU allocations consumed 12798/28800 seconds (3.56 node-hours). Partial silicon and failure evidence remain private and explicitly unscored.
 - No replacement campaign was published. Existing 42-run numerical results and the feature sidecar remain unchanged; the six-profile/twelve-replay publication gate still applies.
+
+## Eight-field checklist layout — November 3, 2026
+
+- UX-only refresh: no HF, schema, CI parity, prediction, or numerical data changes. The legacy combined Planner/routing flag is not reinterpreted as router state.
+- Missing sub-block/router settings, offload scope, state-cache type, and speculative method/actual draft length stay Unknown. Current public artifacts have no applicable AISim support assessment; no support maximum or unsupported-draft label is fabricated. Populated fields and parity integration await separately planned metadata/CI work.
+- Validation: 65 UI tests, AgentX browser checks, and real GLM/Qwen data in light/dark themes and mobile. The eight-field order, equal-height panels, keyboard expansion, selected-run behavior, and unchanged concurrency values passed.
