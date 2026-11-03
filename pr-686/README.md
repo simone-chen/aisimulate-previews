@@ -1,7 +1,7 @@
 # AgentX portable-schema review preview
 
-- [Open the refreshed dashboard](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview&v=05ba03ce6).
-- Dashboard and CI: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), source `05ba03ce67ca47eb95c9d7273c04575c2b1fa855`.
+- [Open the refreshed dashboard](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview&v=3b2b9098d).
+- Dashboard and CI: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), source `3b2b9098d3812fedf3fc07679da4025515ec6ac9`.
 - HF candidate revision: `b0275f0cbd1d4ab71d394e98d2da359423c57167`. The dataset is private; no public dataset migration or promotion occurred.
 - Display only the newer Qwen Weka measurements; remove the older finite Qwen campaign from this preview.
 - Fresh CPU replay of six active GLM points and the retained Qwen Weka 1-/4-lane profiles. All eight completed and passed complete selected-cohort accounting and strict public-field validation. The five accuracy metrics were independently reproduced from observations and native replay records.
@@ -26,3 +26,5 @@
 - Rename the comparison panel to Feature Parity. Unrecorded means missing evidence; N/A means inapplicable to the execution. Cell notes are generated from saved evidence by dashboard templates; observed use remains separate from configured settings.
 
 - Expand the Feature Parity / concurrency-summary row to align with the subplot grid. Share its width between panels and widen Silicon/AISim columns; retain stacked panels below 1100px. Verify GLM and Qwen at seven window widths from 390px to 1920px with no horizontal overflow, plus 81 UI/workflow checks.
+
+- Omit unknown observed-use notes from Feature Parity cells while preserving them in Evidence. Known observations and explanatory parameter/mismatch notes remain visible. Verify all 81 UI/workflow checks, including hidden unknown and retained known observations.
