@@ -1,8 +1,8 @@
 # AgentX portable-schema review preview
 
-- [Open the refreshed dashboard](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview&v=1d94a36f5).
+- [Open the refreshed dashboard](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview&v=b0275f0c).
 - Dashboard and CI: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), source `1d94a36f5e3004e53bca4046e056f2069369f04e`.
-- HF candidate revision: `59a615da5ffa27ba1f206c0940ec99c3459babeb`. The dataset is private; no public dataset migration or promotion occurred.
+- HF candidate revision: `b0275f0cbd1d4ab71d394e98d2da359423c57167`. The dataset is private; no public dataset migration or promotion occurred.
 - Display only the newer Qwen Weka measurements; remove the older finite Qwen campaign from this preview.
 - Fresh CPU replay of six active GLM points and the retained Qwen Weka 1-/4-lane profiles. All eight completed and passed complete selected-cohort accounting and strict public-field validation. The five accuracy metrics were independently reproduced from observations and native replay records.
 - The Qwen silicon campaign remains failed/incomplete and unscored: 8-lane startup exceeded its deadline; 10/13/14 lanes were unattempted. This explicitly labeled partial preview does not qualify the silicon campaign or satisfy the six-profile/twelve-replay promotion gate.
@@ -20,3 +20,5 @@
 - GLM's raw SGLang draft parameter 4 includes the seed: three proposals plus one seed, matching AISim nextn=3 and verification width 4. The raw silicon value remains intact. Acceptance 1.99 is separate. Real normalized mismatches and scoped unsupported bounds remain explicit.
 - Preserve per-role differences and unknown observed exercise. New completed runs require effective records; legacy missing records are never filled with current defaults.
 - All eight prior numerical results, request errors, coverage and pairs reproduce exactly. Local checks: 677 tests and 138 subtests, 81 UI/workflow checks, exact Python static checks and the AgentX browser suite.
+
+- Latest candidate refresh: resolve additional silicon feature states from retained evidence and keep gap reports private. Rerun all eight points against this revision; all numerical results, request errors, coverage and pairs remain identical.
