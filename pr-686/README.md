@@ -1,7 +1,7 @@
 # AgentX comparison dashboard preview
 
 - [Open AgentX](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview).
-- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `092616254f795b649cfd7dd88dd35a5679c670fc`.
+- Dashboard: [AISimulate PR #686](https://github.com/ai-dynamo/aisimulate/pull/686), UI commit `092616254f795b649cfd7dd88dd35a5679c670fc` (includes the qualification/accounting changes from `b77349e844e80021d775a27bb973b8ffa44a11b9`).
 - Evaluated wheel: integration commit `1c753e4668310705b6451ba1ebf3061b3d5b30de`, SHA256 `dff8896a4c374c4e21597076cbf356e8611a0f021ba57ba85313e4ec6fa0530c`.
 - Op-data dependencies remain outside the dashboard PR: #664 at `36a69a683c60081e61d6379f868b1c7257e1a41e`, #665 at `64ac539813677d15e58c8ba051a6b5fc95c5334b`, and #666 at `d8054a56115238776438f2c4ba59fe295a2db430`.
 - Selected prediction databases: B300 SGLang 0.5.21 and vLLM 0.31.0. Measured framework versions are recorded separately in the dashboard.
@@ -40,3 +40,10 @@
 - The Benchmark features checklist sits to the left of Concurrency summary in one bordered, equal-height row; on mobile the checklist comes first. It follows the selected run and uses saved silicon feature metadata; Enabled, Off, N/A, and Not recorded remain distinct. Additional recorded features expand with the keyboard-accessible More features control. All 42 historical runs now have recorded feature inventories; settings without evidence still show Not recorded. Browser checks verified the real GLM/Qwen records, counts, themes, selectors, and reloads.
 
 - Historical feature evidence is pinned separately at HF revision `d289b4242d1e28a181931eedb4464f07243ab0fa`, while measurement/prediction provenance remains at dataset revision `da115d648f0be20a1c4e0408d552a4a1e8bebf9d`. The versioned feature sidecar and its advertised checksum passed the trusted publisher; all 44 existing numerical/qualification JSON files remain byte-identical. The private dataset review candidate is updated; promotion to main remains pending.
+
+## Latest data refresh — November 2, 2026
+
+- Publish the latest committed dashboard assets, including explicit metric denominators/exclusions in Evidence and a repository link for the feature taxonomy revision.
+- All 42 existing numerical results remain unchanged and qualified. All 42 saved HF feature inventories are included through the checksum-pinned sidecar; its dataset revision remains separate from the evaluated measurement revision.
+- The new 14-lane Qwen Weka pilot completed its 600-second silicon admission window, but native replay ended with `server_unsettled`. Collection stopped at 0.78 of eight node-hours; no full profile or replacement 12-replay campaign qualified.
+- The failed pilot and its 36-feature record are retained privately for review. They are not included in public accuracy payloads. The six-profile Weka replacement remains unavailable pending successful qualification.

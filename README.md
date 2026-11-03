@@ -5,7 +5,7 @@
 ## PR #686: AgentX comparison dashboard
 
 - [AgentX preview](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview): one expanded table, integrated silicon comparisons, paired request timelines, and system/manual themes.
-- All 42 fresh replays completed: six GLM points and 36 Qwen runs, using pinned op-data changes from #664/#665/#666 on a separate integration branch.
+- Latest qualified data: six GLM points and 36 finite Qwen runs, using pinned op-data changes from #664/#665/#666 on a separate integration branch. All 42 HF feature inventories are included. The new Qwen Weka pilot failed native qualification; its results remain private and do not replace these scores.
 - Publication checks validated checksums, complete accounting, consistent provenance, and the public field allowlist before upload. Private inputs, prompts, token arrays, raw stream events, local paths, and logs are excluded.
 - [Provenance and validation](pr-686/README.md). This review snapshot is separate from production rollout, which awaits reviewed dataset promotion and the op-data dependencies landing.
 
