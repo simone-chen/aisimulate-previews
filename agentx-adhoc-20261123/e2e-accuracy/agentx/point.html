@@ -34,8 +34,8 @@ SPDX-License-Identifier: Apache-2.0 -->
 <li>The <strong>AgentX tab</strong> uses replays with unmerged CPU-overhead modeling: <code>engine.tokenization</code> plus <code>engine.extra_cpu_overhead</code> (ai-dynamo/aisim#930, #932, and held wiring). The production page doesn't have these yet.</li>
 <li>Each model has two entries:
 <ul style="margin:2px 0 0 18px;padding:0">
-<li><strong>Op-based + CPU overhead</strong>: the op-level model, as main will have it once these PRs merge.</li>
-<li><strong>Learned FPM + CPU overhead</strong>: a frozen GBDT trained on our step captures.</li>
+<li><strong>Op-based</strong>: the op-level model, as main will have it once these PRs merge.</li>
+<li><strong>Learned FPM</strong>: a frozen GBDT trained on our step captures.</li><li>Both entries apply the same CPU overhead, shown in its own column: tokenizer (queued) and unqueued request-path time (#930).</li>
 </ul></li>
 <li><strong>GLM-5.3 (SGLang 0.5.20, official points)</strong>:
 <ul style="margin:2px 0 0 18px;padding:0">

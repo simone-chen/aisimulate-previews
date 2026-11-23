@@ -860,9 +860,10 @@ dialog::backdrop { background: #0009; }
 }
 
 .adhoc-se{color:var(--muted,#6b7280);font-size:.85em}
+.adhoc-cpu{display:block;white-space:nowrap;font-size:12px;line-height:1.5}
 .agentx-table th.adhoc-group{text-align:center;border-bottom:1px solid var(--border)}
 .agentx-table th.adhoc-sub{font-weight:600}
-.agentx-table{min-width:1360px}
+.agentx-table{min-width:1560px}
 .agentx-table td.adhoc-m{min-width:118px}
 #adhoc-q-tooltip,#adhoc-s-tooltip{position:fixed;inset:auto;margin:0;box-sizing:border-box;width:360px;max-width:calc(100vw - 16px);padding:14px 16px;border:1px solid var(--border);border-radius:8px;background:var(--panel);color:var(--text);box-shadow:0 8px 24px #0003;font-size:12px;line-height:1.6}
 #adhoc-q-tooltip p,#adhoc-s-tooltip p{margin:0 0 10px}#adhoc-q-tooltip p:last-child,#adhoc-s-tooltip p:last-child{margin-bottom:0}
