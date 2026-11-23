@@ -1,0 +1,20 @@
+{
+  "branches": [
+    {
+      "branch": "main",
+      "evaluated_revision": {
+        "branch": "main",
+        "commit_sha": "5b6a8aca3886ae59f8e5b92116f38fcd4231fe74"
+      },
+      "last_update": {
+        "run_id": "45155321076",
+        "status": "success"
+      },
+      "published_from_commit": null,
+      "status": "evaluated",
+      "summary_path": "branches/0d6e4079e36703eb/summary.json"
+    }
+  ],
+  "default_branch": "main",
+  "schema_version": 1
+}

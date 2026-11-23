@@ -1,0 +1,57 @@
+<!doctype html>
+<!-- SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+SPDX-License-Identifier: Apache-2.0 -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AgentX · point details</title><script src="../theme.js"></script><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="./dashboard.css"></head><body>
+    <header class="top-header">
+      <div class="shell top-header-inner">
+        <div class="brand">
+          <a href="https://ai-dynamo.org/aisim/" aria-label="AISim documentation home">
+            <img class="brand-logo" src="https://avatars.githubusercontent.com/u/201626793" alt="ai-dynamo" width="32" height="32" />
+          </a>
+          <h1 id="page-title"><a href="https://ai-dynamo.org/aisim/">AISim</a>
+            <span class="page-name">- E2E Accuracy</span>
+          </h1>
+        </div>
+        <div class="header-controls">
+          <label class="branch-control" for="branch-select">Branch:
+            <select id="branch-select" disabled><option>Loading…</option></select>
+          </label>
+          <nav class="source-nav" aria-label="Source links">
+            <a class="github-link" href="https://github.com/ai-dynamo/aisim" aria-label="View on GitHub" title="View on GitHub">
+              <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+            </a>
+            <label class="theme-control"><span class="sr-only">Color theme</span><select id="theme-mode" aria-label="Color theme"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+          </nav>
+        </div>
+      </div>
+    </header>
+<main class="shell dashboard"><aside style="margin:12px 0;padding:12px 16px;border:1px solid #d29922;border-radius:8px;background:rgba(210,153,34,.12);font-size:14px;line-height:1.5">
+<strong>Ad-hoc preview, generated locally on 2026-11-23. This is not the production Gym.</strong>
+<ul style="margin:6px 0 0 18px;padding:0">
+<li>The <strong>AgentX tab</strong> uses replays with unmerged CPU-overhead modeling: <code>engine.tokenization</code> plus <code>engine.extra_cpu_overhead</code> (ai-dynamo/aisim#930, #932, and held wiring). The production page doesn't have these yet.</li>
+<li>Each model has two entries:
+<ul style="margin:2px 0 0 18px;padding:0">
+<li><strong>Op-based + CPU overhead</strong>: the op-level model, as main will have it once these PRs merge.</li>
+<li><strong>Learned FPM + CPU overhead</strong>: a frozen GBDT trained on our step captures.</li>
+</ul></li>
+<li><strong>GLM-5.3 (SGLang 0.5.20, official points)</strong>:
+<ul style="margin:2px 0 0 18px;padding:0">
+<li>Tokenizer cost is 1.217 µs/token, measured on SGLang 0.5.21 on the B300 host.</li>
+<li>No fixed HTTP overhead has been measured for SGLang, so none is applied.</li>
+<li>The learned model was trained on MTP-on step captures. The learned-plus-MTP replay gate is relaxed locally.</li>
+</ul></li>
+<li><strong>Qwen3.5 (vLLM 0.31.0, 6 self-collected lanes)</strong>:
+<ul style="margin:2px 0 0 18px;padding:0">
+<li>CPU overhead is 1.436 µs/token of tokenization, plus 29.5 ms and 0.245 µs/token of extra overhead.</li>
+<li>The extra overhead was fitted on lanes 1 and 4, so those two lanes are in-sample.</li>
+</ul></li>
+<li>The <strong>Overview tab</strong> is an unchanged copy of the live main snapshot.</li>
+</ul>
+</aside>
+<a id="back" class="agentx-back" href="../?tab=agentx" aria-label="Back to AgentX overview">← E2E Accuracy / AgentX</a>
+<h2 id="point-title" class="agentx-point-title">Point details</h2>
+<div id="agentx-point" role="region" aria-label="AgentX point details">Loading…</div></main>
+<script src="./plotly.min.js"></script><script src="./dashboard.js"></script><script src="../agentx.js"></script><script>AgentX.detail();</script></body></html>

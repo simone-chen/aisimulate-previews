@@ -2,6 +2,19 @@
 
 - Open previews through their hosted HTTPS URLs. The index uses absolute links so opening a local checkout's `index.html` also navigates to GitHub Pages; dashboard data cannot load directly from local files.
 
+## AgentX ad-hoc preview (2026-11-23)
+
+- [AgentX tab](https://simone-chen.github.io/aisimulate-previews/agentx-adhoc-20261123/e2e-accuracy/?tab=agentx&throughput=output&view=interactivity&branch=main) has four entries: GLM-5.3 NVFP4 (SGLang 0.5.20, official AgentX points) and Qwen3.5-397B (vLLM 0.31.0, 6 self-collected lanes), each with **Op-based + CPU overhead** and **Learned FPM + CPU overhead**.
+- CPU overhead modeling (`engine.tokenization` and `engine.extra_cpu_overhead`) comes from unmerged ai-dynamo/aisim#930 and #932 plus held wiring.
+  - Qwen: 1.436 µs/token tokenization, plus 29.5 ms and 0.245 µs/token of extra overhead. The extra term was fitted on lanes 1 and 4.
+  - GLM: SGLang 0.5.21 tokenizer only, 1.217 µs/token. No fixed SGLang overhead has been measured, so none is applied.
+- Learned FPM uses frozen GBDT artifacts trained on our step captures.
+  - Qwen: pooled seeds.
+  - GLM: MTP-on, SGLang 0.5.20.
+  - The learned-plus-MTP replay gate is relaxed locally.
+- Replayed locally from origin/main 5ef2532eb plus these patches. Silicon dataset revision: 37cdb0319a7e. The Overview tab is a copy of the live main snapshot.
+- This is a manually published review snapshot. It is not the production Gym.
+
 ## PR #686: AgentX comparison dashboard
 
 - [AgentX preview](https://simone-chen.github.io/aisimulate-previews/pr-686/e2e-accuracy/?tab=agentx&branch=simonec%2Fagentx-opdata-preview): one expanded table, integrated silicon comparisons, paired request timelines, and system/manual themes.
