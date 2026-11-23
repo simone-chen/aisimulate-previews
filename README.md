@@ -13,7 +13,7 @@
   - GLM: MTP-on, SGLang 0.5.20.
   - The learned-plus-MTP replay gate is relaxed locally.
 - Replayed locally from origin/main 5ef2532eb plus these patches. Silicon dataset revision: 37cdb0319a7e. The Overview tab is a copy of the live main snapshot.
-- Metrics, from the dashboard spec: TPOT and TTFT e2e error (request-average) and per-request quantile error (p5–p95). All are unsigned, closed-loop, over matched requests, as mean ± bootstrap stderr (1,000 resamples). Silicon TPOT under 1 ms is excluded, and the count is shown. Output-throughput point error is supplementary. Per-request MAPE was dropped, and anchored per-request error isn't run.
+- Metrics, from the dashboard spec: step error (prefill and decode MAPE ± std/√n on held-out seed-7 step captures, per lane; learned = seed-42 model; GLM drops 2,987 steps whose time SGLang 0.5.20 recorded on the adjacent record). Then TPOT and TTFT e2e error (request-average) and per-request quantile error (p5–p95). Those are unsigned, closed-loop, over matched requests, as mean ± bootstrap stderr (1,000 resamples). Silicon TPOT under 1 ms is excluded, and the count is shown. Per-request MAPE was dropped, and anchored per-request error isn't run.
 - This is a manually published review snapshot. It is not the production Gym.
 
 ## PR #686: AgentX comparison dashboard

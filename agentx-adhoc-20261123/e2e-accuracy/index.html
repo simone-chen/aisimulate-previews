@@ -62,12 +62,12 @@ SPDX-License-Identifier: Apache-2.0
 <li>CPU overhead is 1.436 µs/token of tokenization, plus 29.5 ms and 0.245 µs/token of extra overhead.</li>
 <li>The extra overhead was fitted on lanes 1 and 4, so those two lanes are in-sample.</li>
 </ul></li>
-<li><strong>Metrics:</strong> all errors are unsigned, closed-loop and computed over matched requests. Each cell is mean ± bootstrap standard error (1,000 resamples).
+<li><strong>Metrics:</strong> all errors are unsigned. The e2e and per-request quantile errors are closed-loop, over matched requests, as mean ± bootstrap standard error (1,000 resamples).
 <ul style="margin:2px 0 0 18px;padding:0">
+<li><strong>Step error</strong>: forward-pass model only, MAPE ± std/√n on held-out seed-7 step captures per lane, prefill and decode separately (learned = seed-42 model).</li>
 <li><strong>e2e error</strong>: |mean predicted / mean silicon − 1| over the requests.</li>
 <li><strong>Per-request quantile error</strong>: across per-request latencies, the mean of |Q<sub>pred</sub>/Q<sub>sil</sub> − 1| over p5, p10, …, p95.</li>
 <li>Silicon requests with TPOT under 1 ms (burst delivery) are excluded from TPOT, and the count is shown.</li>
-<li>Output-throughput error is the point error, shown as a supplementary column.</li>
 <li>Per-request MAPE was dropped. Anchored per-request error isn't run here; it's a diagnostic only.</li>
 </ul></li>
 <li>The <strong>Overview tab</strong> is an unchanged copy of the live main snapshot.</li>
