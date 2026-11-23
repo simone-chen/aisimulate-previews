@@ -37,6 +37,30 @@ window.AgentX = (() => {
     }))].join("; ");
   }
 
+
+  const ADHOC=[["tpot_ms","e2e"],["tpot_ms","quantile"],["ttft_ms","e2e"],["ttft_ms","quantile"]];
+  function adhocAgg(runs){
+    const out={};
+    for(const [m,k] of ADHOC){
+      const rows=runs.filter(r=>r.adhoc_metrics).map(r=>r.adhoc_metrics[m]);
+      const n=rows.length;
+      out[m+"/"+k]=n?{v:rows.reduce((s,r)=>s+r[k],0)/n,se:Math.sqrt(rows.reduce((s,r)=>s+r[k+"_se"]**2,0))/n,req:rows.reduce((s,r)=>s+r.n,0),runs:n}:null;
+    }
+    const tput=runs.map(r=>r.point_errors?.output_tokens_s).filter(Number.isFinite);
+    out.tput=tput.length?tput.reduce((s,v)=>s+v,0)/tput.length:null;
+    out.dropped=runs.reduce((s,r)=>s+(r.adhoc_metrics?.tpot_ms.dropped_under_1ms||0),0);
+    return out;
+  }
+  function adhocCells(runs){
+    const a=adhocAgg(runs),c=aggregate(runs);
+    return ADHOC.map(([m,k])=>{const x=a[m+"/"+k];return x?`<td>${x.v.toFixed(1)}% <span class="adhoc-se">± ${x.se.toFixed(1)}</span><small>n=${x.req.toLocaleString()} req${x.runs>1?` · ${x.runs} runs`:""}${m==="tpot_ms"&&k==="e2e"&&a.dropped?` · ${a.dropped} dropped &lt;1 ms`:""}</small></td>`:"<td>–</td>";}).join("")+
+      `<td>${a.tput==null?"–":a.tput.toFixed(1)+"%"}<small>point error</small></td><td>${(c.coverage.matched||0).toLocaleString()} / ${(c.coverage.measured||0).toLocaleString()}</td>`;
+  }
+  function adhocTable(runs){
+    const a=adhocAgg(runs);
+    const row=(m,k,label)=>{const x=a[m+"/"+k];return x?`<tr><th scope="row">${label}</th><td>${x.v.toFixed(2)}%</td><td>± ${x.se.toFixed(2)}%</td><td class="agentx-samples">${x.req.toLocaleString()} requests</td></tr>`:"";};
+    return `<h3 style="margin-top:16px">Agreed accuracy metrics (unsigned)</h3><div class="table-scroll"><table class="agentx-summary-table"><thead><tr><th scope="col">Metric</th><th scope="col">Error</th><th scope="col">Bootstrap stderr</th><th scope="col" class="agentx-samples">Samples</th></tr></thead><tbody>${row("tpot_ms","e2e","TPOT e2e error (request-average)")}${row("tpot_ms","quantile","TPOT quantile-matched error, p5–p95")}${row("ttft_ms","e2e","TTFT e2e error (request-average)")}${row("ttft_ms","quantile","TTFT quantile-matched error, p5–p95")}</tbody></table></div><p class="agentx-summary-note">Closed-loop replay; matched requests only. Silicon requests with TPOT under 1 ms (burst delivery) are excluded from TPOT: ${a.dropped} here. Stderr is a 1,000-resample bootstrap over requests; multi-run rows combine per-run stderrs.</p>`;
+  }
   function cells(result) {
     return metrics.map(m => `<td>${fmt(result.point_errors[m])}<small>n=${result.point_counts[m]} run${result.point_counts[m]===1?"":"s"}</small></td>`).join("") +
       ["tpot_ms","ttft_ms"].map(m => `<td title="${result.request_errors[m].count} scored requests">${fmt(result.request_errors[m].mape)}<small>n=${result.request_errors[m].count.toLocaleString()}</small></td>`).join("") +
@@ -47,8 +71,6 @@ window.AgentX = (() => {
       ["point","tpot_ms","TPOT","ms/token"],
       ["point","ttft_ms","TTFT","ms"],
       ["point","output_tokens_s","Output throughput","output tokens/s"],
-      ["request","ttft_ms","TTFT","ms"],
-      ["request","tpot_ms","TPOT","ms/token"],
     ].map(([scope,metric,label,unit])=>{
       const request=scope==="request",values=request?result.request_errors[metric]:null;
       const count=request?values.count:result.point_counts[metric];
@@ -115,7 +137,7 @@ window.AgentX = (() => {
   }
   const pointDefinition = `<p><strong>Per-point:</strong> compare the aggregate result across the benchmark’s conversation requests.</p><p><strong>Request average:</strong> compare requests individually, then average their errors.</p><p>Tool-call waits are excluded from TTFT/TPOT calculations. Point error can be smaller because over- and under-predictions cancel when averaged.</p>`;
   const pointHelp = `<button type="button" id="agentx-point-info" class="agentx-info" aria-label="About point TTFT and TPOT error" aria-describedby="agentx-point-tooltip"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4"/><circle cx="8" cy="4.5" r="0.6" fill="currentColor" stroke="none"/></svg></button>`;
-  const headings = `<tr><th scope="col">Model / concurrency</th><th scope="col">Hardware / backend</th><th scope="col">Performance model</th><th scope="col">${pointHelp} Point TPOT error</th><th scope="col">Point TTFT error</th><th scope="col">Point output-throughput error</th><th scope="col">Request TPOT MAPE</th><th scope="col">Request TTFT MAPE</th><th scope="col">Matched / measured</th></tr>`;
+  const headings = `<tr><th scope="col">Model / concurrency</th><th scope="col">Hardware / backend</th><th scope="col">Performance model</th><th scope="col">${pointHelp} TPOT e2e error</th><th scope="col">TPOT quantile error (p5–p95)</th><th scope="col">TTFT e2e error</th><th scope="col">TTFT quantile error (p5–p95)</th><th scope="col">Output-throughput error</th><th scope="col">Matched / measured</th></tr>`;
   function bindPointHelp(target) {
     const button=target.querySelector("#agentx-point-info"), tooltip=target.querySelector("#agentx-point-tooltip");
     let timer;
@@ -206,10 +228,10 @@ window.AgentX = (() => {
         (archived?`<p class="agentx-beta">Archived finite campaign. <a href="${esc(activeUrl)}">View current campaign ↗</a></p>`:"")+
         `<div class="table-scroll"><table class="agentx-table"><thead>${headings}</thead><tbody>${[...new Set(data.runs.map(r=>JSON.stringify([r.category,r.model,r.hardware,r.backend,r.precision,r.tensor_parallel,performanceModel([r],true)])))].map((key,index) => {
           const points=data.runs.filter(r=>JSON.stringify([r.category,r.model,r.hardware,r.backend,r.precision,r.tensor_parallel,performanceModel([r],true)])===key), first=points[0], id=`ax-model-${index}`;
-          return `<tr class="agentx-model"><th><button type="button" data-agentx-expand="${id}" aria-expanded="true">▾ ${esc(first.model)}</button><small class="source-tag">${first.category==="agentx"?"AgentX official":"Self-collected"}</small></th><td>${esc(first.hardware)} · ${[...new Set(points.map(r=>`${r.backend} ${r.measured_backend_version || "version unrecorded"}`))].map(esc).join(", ")}<small>${esc(first.precision)} · TP${first.tensor_parallel}</small></td><td class="agentx-perf-model">${esc(performanceModel(points,true))}</td>${cells(aggregate(points))}</tr>` +
+          return `<tr class="agentx-model"><th><button type="button" data-agentx-expand="${id}" aria-expanded="true">▾ ${esc(first.model)}</button><small class="source-tag">${first.category==="agentx"?"AgentX official":"Self-collected"}</small></th><td>${esc(first.hardware)} · ${[...new Set(points.map(r=>`${r.backend} ${r.measured_backend_version || "version unrecorded"}`))].map(esc).join(", ")}<small>${esc(first.precision)} · TP${first.tensor_parallel}</small></td><td class="agentx-perf-model">${esc(performanceModel(points,true))}</td>${adhocCells(points)}</tr>` +
             [...new Set(points.map(r=>r.lanes))].sort((a,b)=>a-b).map(lanes=>{
               const matches=points.filter(r=>r.lanes===lanes), point=matches[0], failed=matches.filter(r=>r.outcome!=="completed").length;
-              return `<tr data-agentx-parent="${id}" data-agentx-href="${esc(pointUrl(point,branch))}" tabindex="0" aria-label="${lanes} lanes: open details"><th><a href="${esc(pointUrl(point,branch))}">${lanes} lane${lanes===1?"":"s"} ↗</a><small>${matches.length} run${matches.length===1?"":"s"}${failed?` · ${failed} unavailable`:""}</small></th><td>${source(point)}</td><td class="agentx-perf-model">${esc(performanceModel(matches,true))}</td>${cells(aggregate(matches))}</tr>`;
+              return `<tr data-agentx-parent="${id}" data-agentx-href="${esc(pointUrl(point,branch))}" tabindex="0" aria-label="${lanes} lanes: open details"><th><a href="${esc(pointUrl(point,branch))}">${lanes} lane${lanes===1?"":"s"} ↗</a><small>${matches.length} run${matches.length===1?"":"s"}${failed?` · ${failed} unavailable`:""}</small></th><td>${source(point)}</td><td class="agentx-perf-model">${esc(performanceModel(matches,true))}</td>${adhocCells(matches)}</tr>`;
             }).join("");
         }).join("")}</tbody></table></div><div id="agentx-point-tooltip" role="tooltip" popover>${pointDefinition}</div><details class="agentx-method"><summary>Metrics and provenance</summary>${methodology()}${provenance(data.snapshot,data.runs)}</details>`;
       bindPointHelp(target);
@@ -305,7 +327,7 @@ window.AgentX = (() => {
         const point=record?{...measured,feature_metadata:record.feature_metadata,feature_dataset_revision:featureData.feature_dataset_revision}:measured;
         document.getElementById("selected-run-label").textContent=`Selected run · ${!finite?"Observed outputs · Weka profile":`${Number(length).toLocaleString()} tokens · ${cache} · repeat ${repeat}`} · ${point.outcome}${point.reason?" · "+point.reason.replaceAll("_"," "):""}${point.snapshot.measurement_campaign_status==="partial"?" · Partial silicon campaign · unscored dataset; not eligible for promotion":""}`;
         const lanes=`${first.lanes} lane${first.lanes===1?"":"s"}`;
-        const accuracy=`<div class="agentx-summary-layout">${featureChecklist(point)}<section class="agentx-summary-main"><h2>Concurrency summary</h2><p>${runs.length>1?"All ":""}${runs.length} run${runs.length===1?"":"s"} · ${lanes} · ${group.coverage.matched.toLocaleString()} / ${group.coverage.measured.toLocaleString()} requests matched · ${esc(performanceModel(points))}</p><div class="table-scroll"><table class="agentx-summary-table"><thead><tr><th scope="col">Metric</th><th scope="col"><span class="comparison-source-dot silicon" aria-hidden="true"></span>Silicon</th><th scope="col"><span class="comparison-source-dot aisim" aria-hidden="true"></span>AISim</th><th scope="col">Error</th><th scope="col" class="agentx-samples">Samples</th></tr></thead><tbody>${comparisonRows(group)}</tbody></table></div><p class="agentx-summary-note">Point rows average scored runs equally. Request rows average the individual requests scored for that metric.</p></section></div>`;
+        const accuracy=`<div class="agentx-summary-layout">${featureChecklist(point)}<section class="agentx-summary-main"><h2>Concurrency summary</h2><p>${runs.length>1?"All ":""}${runs.length} run${runs.length===1?"":"s"} · ${lanes} · ${group.coverage.matched.toLocaleString()} / ${group.coverage.measured.toLocaleString()} requests matched · ${esc(performanceModel(points))}</p><div class="table-scroll"><table class="agentx-summary-table"><thead><tr><th scope="col">Metric</th><th scope="col"><span class="comparison-source-dot silicon" aria-hidden="true"></span>Silicon</th><th scope="col"><span class="comparison-source-dot aisim" aria-hidden="true"></span>AISim</th><th scope="col">Error</th><th scope="col" class="agentx-samples">Samples</th></tr></thead><tbody>${comparisonRows(group)}</tbody></table></div><p class="agentx-summary-note">Point rows: silicon vs AISim point values for reference.</p>${adhocTable(points)}</section></div>`;
         const evidence=`<h2>Metrics and provenance</h2>${methodology()}${coverageEvidence(point)}${provenance(point.snapshot,[point])}${featureEvidence(point)}${simulationEvidence(point)}<h2>AISim replay configuration</h2><ul>${point.config_summary.map(item=>`<li><strong>${esc(item.name)}:</strong> ${esc(item.value??"Unavailable")}</li>`).join("")}</ul><h2>Sources and limitations</h2><ul><li>${source(point)}</li><li>${point.boundary==="complete_finite_cohort"?"Finite measured cohort, including between-turn delays.":"Fixed profiling admission window; silicon and replay may progress through different requests."}</li><li>Request comparison requires a unique successful match and equal output lengths. Source identity does not establish identical prompts or cache history.</li><li>Curve MAPE uses covered, positive silicon observations on a one-second phase grid. Curve smoothing is described per chart. Zero and missing values are counted; preparation remains unscored.</li><li>Accuracy is advisory. No timing calibration is applied.</li></ul>`;
         target.innerHTML=`<div class="replay-dashboard embedded ${document.documentElement.dataset.theme==="light"?"light":""}">${fragment}</div>`;
         const state=new URLSearchParams(location.hash.slice(1)),view=state.get("view"),stage=state.get("stage")==="preparation"?"preparation":"profile";
