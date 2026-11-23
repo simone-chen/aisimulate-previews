@@ -40,7 +40,7 @@ SPDX-License-Identifier: Apache-2.0 -->
 <li><strong>GLM-5.3 (SGLang 0.5.20, official points)</strong>:
 <ul style="margin:2px 0 0 18px;padding:0">
 <li>Tokenizer cost is 1.217 µs/token, measured on SGLang 0.5.21 on the B300 host.</li>
-<li>No fixed HTTP overhead has been measured for SGLang, so none is applied.</li>
+<li>Unqueued overhead is 12.6 ms + 0.342 µs/token: client TTFT minus the engine prefill span on our lane-1 0.5.20 capture runs, less the tokenizer. These are separate runs from the AgentX points.</li>
 <li>The learned model was trained on MTP-on step captures. The learned-plus-MTP replay gate is relaxed locally.</li>
 </ul></li>
 <li><strong>Qwen3.5 (vLLM 0.31.0, 6 self-collected lanes)</strong>:

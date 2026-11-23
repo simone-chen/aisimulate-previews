@@ -7,7 +7,7 @@
 - [AgentX tab](https://simone-chen.github.io/aisimulate-previews/agentx-adhoc-20261123/e2e-accuracy/?tab=agentx&throughput=output&view=interactivity&branch=main) has four entries: GLM-5.3 NVFP4 (SGLang 0.5.20, official AgentX points) and Qwen3.5-397B (vLLM 0.31.0, 6 self-collected lanes), each with **Op-based + CPU overhead** and **Learned FPM + CPU overhead**.
 - CPU overhead modeling (`engine.tokenization` and `engine.extra_cpu_overhead`) comes from unmerged ai-dynamo/aisim#930 and #932 plus held wiring.
   - Qwen: 1.436 µs/token tokenization, plus 29.5 ms and 0.245 µs/token of extra overhead. The extra term was fitted on lanes 1 and 4.
-  - GLM: SGLang 0.5.21 tokenizer only, 1.217 µs/token. No fixed SGLang overhead has been measured, so none is applied.
+  - GLM: SGLang 0.5.21 tokenizer, 1.217 µs/token, plus 12.6 ms and 0.342 µs/token of unqueued overhead, measured on our lane-1 0.5.20 captures.
 - Learned FPM uses frozen GBDT artifacts trained on our step captures.
   - Qwen: pooled seeds.
   - GLM: MTP-on, SGLang 0.5.20.
